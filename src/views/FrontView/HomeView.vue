@@ -2,7 +2,7 @@
   <section>
     <div class="position-relative">
     <div class="position-absolute" style="top:0; bottom:0; left:0; right:0; background-image: url(https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710324195188.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=AhMd9erYDpf5WDuPPf%2BqnvpiCSN1TiQKad4LGPZR78nR0yzQHSZtp0vZZkc7PfmbZ1aGbf7i24voou81hia0LSTfnykZDiKDUaG%2BoeWr2r2tM3WxDQ6XHZaBhf0KraZc6KnpX9z8fwf6lZMDucLbmkBXK5shPpvtE9C7H6%2FmpLAsG5ZJBUWRC2sBm6kCwS9lPnkade77%2F3AC%2BvzpfGC0FeYLmOou5QRG7AswpQv9nrhzfREf%2FimvJPEpTkqZ2sLlfnY153wdpE%2FRAYjHOMYoTm0SmI1I8dHi7o3jHWM3C36ofIiR6gyflo8QeBJoLmQjKMlvsmsW0af8g5AcTbwdgw%3D%3D);
-      background-position: center center;">
+      background-position: center center; background-size:cover;">
     </div>
     <div class="container d-flex flex-column" style="min-height: 80vh;">
       <div class="row justify-content-center my-auto">

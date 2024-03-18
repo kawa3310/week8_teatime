@@ -5,39 +5,38 @@
         <RouterLink class="router-link nav-link active navbar-brand"
         to="/user/home">TeaTime</RouterLink>
       </h4>
-    </div>
-    <button class="btn d-lg-none d-block" type="button"
-    data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse flex justify-content-end" id="navbarToggler">
-      <div class="navbar-body my-2">
-        <ul class="navbar-nav text-center text-nowrap">
-          <li class="nav-item me-3">
-            <RouterLink class="nav-link" to="/user/home">關於TeaTime
-            </RouterLink>
-          </li>
-          <li class="nav-item me-3">
-            <RouterLink class="nav-link" to="/user/merchandise">尋找甜點</RouterLink>
-          </li>
-          <li class="nav-item-icon me-3 position-relative">
-            <RouterLink class="nav-link py-1" :to="`/user/cart`">
-              <i class="bi bi-cart-fill">
-                <span class="nav-icon badge rounded-pill fw-normal translate-middle bg-danger">
-                  {{ this.cart.length }}
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </i>
-            </RouterLink>
-          </li>
-          <li class="nav-item me-3">
-            <RouterLink class="nav-link py-1" :to="`/`">
-              <i class="bi bi-person-lines-fill"></i>
-            </RouterLink>
-          </li>
-        </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-body my-2">
+          <ul class="navbar-nav text-center text-nowrap">
+            <li class="nav-item me-3">
+              <RouterLink class="nav-link" to="/user/home">關於TeaTime
+              </RouterLink>
+            </li>
+            <li class="nav-item me-3">
+              <RouterLink class="nav-link" to="/user/merchandise">尋找甜點</RouterLink>
+            </li>
+            <li class="nav-item-icon me-3 position-relative">
+              <RouterLink class="nav-link py-1" :to="`/user/cart`">
+                <i class="bi bi-cart-fill">
+                  <span class="nav-icon badge rounded-pill fw-normal translate-middle bg-danger">
+                    {{ this.cart.length }}
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </i>
+              </RouterLink>
+            </li>
+            <li class="nav-item me-3">
+              <RouterLink class="nav-link py-1" :to="`/`">
+                <i class="bi bi-person-lines-fill"></i>
+              </RouterLink>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
