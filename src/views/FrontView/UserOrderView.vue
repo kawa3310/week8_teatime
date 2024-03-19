@@ -67,6 +67,10 @@
             <div class="d-flex justify-content-end mt-4 ps-2">
               <p class="mb-0 h5 mb-3 text-end">總金額: NT${{ order?.total }}</p>
             </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-secondary py-3 px-3
+              rounded-0" @click="checkout">去結帳</button>
+            </div>
           </div>
         </div>
       </div>
@@ -95,6 +99,34 @@ export default {
         .then((res) => {
           this.isloading = false;
           this.order = res.data.order;
+        })
+        .catch((error) => {
+          this.isloading = false;
+          Swal.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500,
+            icon: 'error',
+            title: error.response.data.message,
+          });
+        });
+    },
+    checkout() {
+      this.isloading = true;
+      this.orderId = this.$route.params.id;
+      axios.post(`${VITE_URL}/api/${VITE_PATH}/pay/${this.orderId}`)
+        .then(() => {
+          this.isloading = false;
+          this.$router.push('/user/merchandise');
+          Swal.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500,
+            icon: 'success',
+            title: '結帳成功',
+          });
         })
         .catch((error) => {
           this.isloading = false;
