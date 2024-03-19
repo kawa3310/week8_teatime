@@ -12,6 +12,6 @@ export default {};
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 </style>

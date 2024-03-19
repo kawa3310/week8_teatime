@@ -22,25 +22,25 @@
             data-ride="carousel">
               <div class="carousel-inner">
                   <img :src="product.imageUrl"
-                  class="img-product object-fit-cover ms-5 pt-1 pb-1 pb"
+                  class="img-product object-fit-cover ms-5 pt-1 pb-1"
                     :alt="product.imageUrl">
               </div>
             </div>
           </div>
           <div class="col-md-5">
             <div class="col">
-              <h5>{{ product.title }}
+              <h5 class="text-title">{{ product.title }}
                 <span class="badge fs-9 rounded-3 bg-success text-light"
                 >{{ product.category }}</span>
               </h5>
-                <div class="mb-4 fs-8">
+                <div class="mb-4 fs-8 text-title">
                   <span>{{ product.description }}</span>
                   <hr>
-                  <p class="fw-bold fs-7 text-start">NT$
+                  <p class="text-title-2 fw-bold fs-7">NT$
                     <span class="price fs-3">{{ product.price }}</span> 元
                   </p>
                 </div>
-                <div class="item-value">
+                <div class="item-value text-title">
                   <span class="fs-8">數量：</span>
                     <label class="form-select-sm">
                       <select name="number" id="number" v-model.number="qty">
@@ -62,7 +62,7 @@
       <div class="row justify-content-center">
         <h5 class="text-say text-center">【 師傅有話要說 】</h5>
           <div class="col-md-6 offset-md-3 align-self-center">
-            <h4 class="text-back text-center text-nowrap">{{ product.content }}</h4>
+            <h4 class="text-back text-center lh-lg">{{ product.content }}</h4>
         </div>
         <div class="col-md-3">
           <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710159844724.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=DJbPP3CWlMkamBFQ79A7FhY0JlPf2g1maCPSEwOrQsUCojIM%2BSrm%2FqFts3SCB%2BbhoWx8TUu3RJiI9qbtyJnMqLTdxAbarnch5H%2FWzm%2BcWdrfoNEdPlc7ILcgs%2FTQsAS1S3oi1JfeMplBk4zjpQJFQun%2BnvQXPavUnua5KxFI7rLAfh5skkUlv6m9q1wKlHFXg5W5yPO9RhsEbCGR8R0LIvrhGKEgyBlg7eJ6sPaz%2FsHzcEmTJP8wbfUTPfIK3WbHVAxm2BvN%2Fhx7pzkF0fxx73Wh6%2BwJQIBMsPjKzo%2Blo2ejwQktfRsElmJNFIT%2B6Iok22nKAC2xJY0C0u%2F3cTkcZw%3D%3D"
@@ -72,12 +72,12 @@
       </div>
     </div>
   </section>
-    <div class="container mt-5 mb-5">
+    <div class="container-2 mt-5 mb-5">
       <div class="row justify-content-center">
         <div class="row p-5">
           <span class="h4 text-start">螞蟻人還喜歡</span>
           <hr>
-          <div class="col" v-for="item in recommend" :key="item.id">
+          <div class="col col-box" v-for="item in recommend" :key="item.id">
             <div class="card-body h-100 bg-body border rounded-0">
               <div class="box">
                 <RouterLink :to="`/user/product/${item.id}`" class="link">
@@ -152,7 +152,7 @@ export default {
           }
         })
         .catch((error) => {
-          // this.isloading = false;
+          this.isloading = false;
           Swal.fire({
             toast: true,
             position: 'top-end',
@@ -199,5 +199,56 @@ export default {
 }
 .text-back {
   color: #A07575;
+}
+
+@media (max-width: 1140px) {
+  .text-title-2 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    margin-left: 70px;
+  }
+  .img-product {
+    width: 300px;
+    height: 300px;
+  }
+  .img-say-img {
+    padding-right: 120px
+  }
+  .card-img-top {
+    height: 100px;
+  }
+}
+
+@media (max-width: 375px) {
+  .breadcrumb-item {
+    font-size: 14px;
+  }
+  .col-item-img {
+    margin: 0px 0px 30px 0px;
+  }
+  .text-title {
+    text-align: center;
+  }
+  .text-title-2 {
+    text-align: center;
+  }
+  .img-product {
+    width: 230px;
+    height: 240px;
+    margin-bottom: 20px;
+  }
+  .img-say-img {
+    padding-right: 0px
+  }
+  .container-2{
+    display: none;
+  }
+  .col-box {
+    display: none;
+  }
 }
 </style>

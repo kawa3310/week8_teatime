@@ -1,4 +1,5 @@
 import './assets/all.scss';
+import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
 import 'vue-loading-overlay/dist/css/index.css';
 import 'sweetalert2/dist/sweetalert2.min.css';

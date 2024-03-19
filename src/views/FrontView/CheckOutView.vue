@@ -19,7 +19,7 @@
               <div class="ms-4 w-100 position-relative">
                 <a class="delete-icon position-absolute" type="button"
                 @click="delCart(cart.id)">
-                  <i class="bi bi-trash"></i>
+                  <i class="bi-icon bi bi-trash"></i>
                 </a>
                 <p class="mb-0 lh-lg fw-bold">
                   {{ cart.product.title }}</p>
@@ -39,7 +39,7 @@
                       <i class="bi bi-dash fs-7"></i>
                     </button>
                   </div>
-                  <div class="col-md-6 d-flex justify-content-end align-items-center
+                  <div class="text-price col-md-6 d-flex justify-content-end align-items-center
                   pe-4 pt-md-0 pt-4">
                     <span class="text-nowrap">NT ${{ cart.total }}</span>
                   </div>
@@ -243,5 +243,11 @@ export default {
 .card-img-top {
   width: 60px;
   height: 60px;
+}
+
+@media (max-width: 375px) {
+  .delete-icon {
+    padding: 0px 0px 50px 0px;
+  }
 }
 </style>

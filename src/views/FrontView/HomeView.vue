@@ -16,10 +16,10 @@
         <div class="img-women">
         <img
           src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710335446843.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=hSjP1y3YXlFkk%2F8oI6NSuYnn7EEPQRAdlj9F%2BMdrXv8PTeq6yULS%2FJI2I%2F53Kkw%2Fvxh6QSXXZoE9urOE6HMdEHtoR7ff9OJbNLzeg9r9eX3BzQg%2BD1Axk5q10HjU0fw%2BESudZumfuIJnW4EYYS0aF3DylvVrX0CyjFMsWz6QTZy4OuYPAA07jbXQSO3Deicpj3p9eWESN%2FDqzWgPIKnqxMFLQr8f021g0lvFEYbNuKFM8%2Bh0dL7qUs7Ag7Vj0jh4JCWKzCG7P2ndfOmmMRsNliQrjpxtLn2ehyD8L5iiIC6SMvM4zLCvXEWLXQb8CDKlxMstGEZ58eKFLzb4BCIgmA%3D%3D"
-          class="card-img-top rounded-0 img-fluid" alt="img"/>
+          class="card-title card-img-top rounded-0 img-fluid" alt="img"/>
         </div>
       </div>
-      <div class="col-3 align-self-center">
+      <div class="text-pada col-3 align-self-center">
         <h2 class="text-center text-nowrap">熊 貓 泡 芙 5 步 驟</h2>
       </div>
     </div>
@@ -37,7 +37,7 @@
         <div class="col-md-6 text-center align-self-center">
           <div class="align-text-top">
             <h4 class="mb-3">第一步，<span class="h4">底子</span>決定一切</h4>
-            <p class="text-nowrap">讓你的麵糊達到最完美的程度</p>
+            <p class="text">讓你的麵糊達到最完美的程度</p>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
         <div class="col-md-6 text-center align-self-center">
           <div class="align-text-top">
             <h4 class="mb-3">第二步，<span class="h4">憐愛</span>很重要</h4>
-            <p class="text-nowrap">要像對待愛人一般，精準控制溫度，照顧到他成型</p>
+            <p class="text">要像對待愛人一般，精準控制溫度，照顧到他成型</p>
           </div>
         </div>
         <div class="col-md-6 my-3">
@@ -75,7 +75,7 @@
         <div class="col-md-6 text-center align-self-center">
           <div class="align-text-top">
             <h4 class="mb-3">第三步，<span class="h4">熱情</span>不可或缺</h4>
-            <p class="text-nowrap">用你的熱情融化巧克力，做出熊貓的耳朵鼻子嘴巴熊掌</p>
+            <p class="text">用你的熱情融化巧克力，做出熊貓的耳朵鼻子嘴巴熊掌</p>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@
         <div class="col-md-6 text-center align-self-center">
           <div class="align-text-top">
             <h4 class="mb-3">第四步，<span class="h4">耐心</span>能成就</h4>
-            <p class="text-nowrap">別忘了鮮奶油是重要的靈魂伴侶，打吧，用愛打到發</p>
+            <p class="text">別忘了鮮奶油是重要的靈魂伴侶，打吧，用愛打到發</p>
           </div>
         </div>
         <div class="col-md-6 my-3">
@@ -113,7 +113,7 @@
         <div class="col-md-6 text-center align-self-center">
           <div class="align-text-top">
             <h4 class="mb-3">第五步，<span class="h4">用心</span>填充</h4>
-            <p class="text-nowrap">將三魂七魄注入，讓他成為一顆完整的泡芙</p>
+            <p class="text">將三魂七魄注入，讓他成為一顆完整的泡芙</p>
           </div>
         </div>
       </div>
@@ -125,13 +125,13 @@
         <div class="col-md-3 align-self-center">
           <RouterLink class="products nav-item
             nav-link" to="/user/merchandise">
-            <h2>立刻選購 ⇨</h2>
+            <h2 class="img-go">立刻選購 ⇨</h2>
           </RouterLink>
         </div>
         <div class="col-3 my-5">
           <RouterLink class="products nav-item
             nav-link" to="/user/merchandise">
-            <div class="img-tetx-btn">
+            <div class="mg-eat-img">
               <img
                 src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710497535093.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=EnMQn0QcIlbszi4i%2F4N5WqwCYYP7WS2ImxBo%2FHgN6hCAboyIGILNHkdlFVqcbiTLYvPI0MDVqTT%2BSUIb03osc2C3vCOYXfSzFkoV93iqXZ2dgUl2Gwd7G9zbMOEiqV2OOdRfeEKaZA8o0xF5G1ThHofyr4trz5jEK8L04F%2BLagw4vNLh19yen5trl0rwWPe9wEpXfxqvyoBYOnn8GSeBlKrc4qHCcrGQJ0F7ORYbOaBMOPSl4yT4QvAXPB0PF6lrg9R%2ByB2vx4bCA3r1PzshyLknWE3pf5Ni1V%2B0ZOiwOYbgUNn7gMeEy%2Bt0AOP9R1KGqkz9jQ5PHJkA8Z5JFqhUOw%3D%3D"
                 class="card-img-top rounded-1 object-fit-cover" alt="img"/>
@@ -170,15 +170,30 @@ export default {
 .products:hover {
   color: #E15857;
 }
-.img-tetx-btn{
+.mg-eat-img{
   width: 250px;
 }
 .home {
   margin: 0 auto;
 }
 @media (max-width: 768px) {
-  .home {
-
+  p{
+    word-wrap: break-word;
+  }
+  .img-go {
+    font-size: 25px;
+    margin-right: 15px;
+  }
+  .card-img-top {
+    width: 200px;
+  }
+}
+@media (max-width: 375px) {
+  .img-women {
+    display: none;
+  }
+  .text-pada {
+    width: 275px;
   }
 }
 </style>

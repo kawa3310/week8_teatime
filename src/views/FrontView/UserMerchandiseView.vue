@@ -2,10 +2,10 @@
   <VueLoading :active="isloading" :z-index="1060"></VueLoading>
   <div class="container mt-md-5 mt-3 mb-5">
     <ul class="category list-unstyled d-flex justify-content-center mt-4 mb-5">
-      <li class="list-group list-group-flush p-0 mx-2 border"
+      <li class="list-change list-group list-group-flush border"
       v-for="(item,key) in filter.list" :key="key">
         <a
-        class="list-group-item px-3 px-md-4 py-1 rounded-0"
+        class="list-group-item px-3 py-1 rounded-0"
         :class="activeClass == key ? 'active' : ''"
         @click.prevent="changeCategory(item,key)">{{ item }}</a>
       </li>
@@ -53,7 +53,7 @@ export default {
     return {
       products: [],
       filter: {
-        list: ['全部', '蛋糕', '泡芙', '餅乾', '其他甜點', '飲品'],
+        list: ['全部', '泡芙', '蛋糕', '餅乾', '布丁', '飲品'],
         str: '全部',
       },
       activeClass: -0,
@@ -113,5 +113,26 @@ export default {
 }
 .card-img-top {
   height: 200px;
+}
+
+@media (max-width: 1400px) {
+  .list-change {
+    padding: 0 auto;
+    margin: 0px 0px 0px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .list-change {
+    padding: 0 auto;
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+@media (max-width: 365px) {
+  .list-change {
+    padding: 0 auto;
+    margin: 0px 0px 0px -10px;
+  }
 }
 </style>
