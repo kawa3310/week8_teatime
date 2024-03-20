@@ -1,15 +1,14 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-dark px-sm-1 px-md-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-sm-1 px-md-2">
     <div class="container-fluid">
       <h4 class="m-0">後台管理</h4>
     </div>
-    <button class="btn d-lg-none d-block" type="button"
-    data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse flex justify-content-end" id="navbarToggler">
+    <div class="collapse navbar-collapse flex justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-body my-2">
         <ul class="navbar-nav text-center text-nowrap">
           <li class="nav-item me-3">

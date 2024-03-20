@@ -245,6 +245,12 @@ export default {
   height: 60px;
 }
 
+@media (max-width: 768px) {
+  .delete-icon {
+    margin: 0px 0px 30px 10px;
+  }
+}
+
 @media (max-width: 375px) {
   .delete-icon {
     padding: 0px 0px 50px 0px;

@@ -31,7 +31,7 @@
           <div class="img">
             <img
               src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710417968491.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=F6DAsOccBpCFEJrvJoVGLgXJo%2BtUIBM%2F0SHIkG7xbc%2BTqdc4KUyT8DzfUtrN4WGTnXi3XOObzQVWbI25mgzIg%2BjqA8%2BXC%2BH%2BQ8J13%2BTYD5XhNORuuJotQKupvTyBxLL49rXVnrx6iQgE3mDxgiBuIb%2Bh9gPCGId9yKFTP70WoGDatMevQbgBF7DnVl8U48%2Bvh7mkOcgIT5yOgX7mHbCkctLsYSOxBmlOJrW43U%2FUpgUY3KFtTTZk1OThTV52HGDZrg4yF%2BGDJscS78whEIBwtSjymjg5PAFpT1FxBNXohpgwuSmLYyk4QyVQYITosStkuNyi6RWtcrYgZ6razPaPow%3D%3D"
-              class="card-img-top rounded-1 object-fit-cover w-100" alt="img"/>
+              class="card-img-top-2 rounded-1 object-fit-cover w-100" alt="img"/>
           </div>
         </div>
         <div class="col-md-6 text-center align-self-center">
@@ -56,7 +56,7 @@
           <div class="img">
             <img
               src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710417534502.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=QcYyi%2FSVa8%2B%2BULAg%2FncQsJepsVdTtkLiHUA6opr%2FcUFc3F%2B9nKFouG8K3FBfCV8TdeTPlWnF3ksVrv5KU8CU00KDiLXLkKnlyQHGQtmIQtMhe35cEKN1u3HT0mm%2BPa6DPhKvA3CcwhwE2i5DRTrhEt33CVkqxrk%2BbABfTmr3m%2FYT623nFer3rHtH%2Butfh4TPvI4V9X4cC%2Bvo%2FKjnQ1%2FLD%2Fp6WXnVJk50FpSCnipO7KRWNkjxP%2FEahPVS4OAxiCLRdoMc5wd8KEBxbbl2EBuq8iAa6XVdveiLeMHwK3CAtRtY9Jx6%2FhPQF%2BNroDJZLZz15YetZgprZyxxMDq6B4jZvw%3D%3D"
-              class="card-img-top rounded-1 object-fit-cover w-100" alt="img"/>
+              class="card-img-top-2 rounded-1 object-fit-cover w-100" alt="img"/>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
           <div class="img">
             <img
               src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710417590598.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=bmsG2McNofcpzJo1vpFaNn%2BM4eUwjeYHobb4NTTBVzmNYj3off8W%2FowUqNcmV6zz5jBo4yflA5fBi20qcHAh%2Fys9dxi6wsCFU%2BCmI%2BHvL0Ow14XVsASRk7S6JQpxnPQfdHjDuY5V3Gl3nheZE5%2FUaAlfYLC6V11Aa7EjTpnQxG9PPKCGx%2Fog42KIqFHgWpywp0%2B8yWlkm2yp2%2BBzfwafIQ7YxJhNnSVJH8J7UyagdJ%2BfBR5b34BHu%2BMevobrllpDp3EtoKxRIZwrnNhPO66iIQRwl7i6rAk67wgVg8WdAnxAvS2cAYaEhdUrcUnDtRSVtvnPXpWtc02O%2FaGgP8IX3Q%3D%3D"
-              class="card-img-top rounded-1 object-fit-cover w-100" alt="img"/>
+              class="card-img-top-2 rounded-1 object-fit-cover w-100" alt="img"/>
           </div>
         </div>
         <div class="col-md-6 text-center align-self-center">
@@ -94,7 +94,7 @@
           <div class="img">
             <img
               src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710253760213.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=RHjL4ILi2Q064rCNvyw8v72EPHM7OZ%2Fg%2FumoHlIZSD8%2FkpQytdF%2BjYxvPEGXLxF9PvtWKqLQt9flL45upJP%2BnqWY55M2VL2ALs5nGjE%2BT2AgteBwS1HZPhIIIYshEJpt%2F7yQ3duvhnenjaUwpxyvlDzIES%2F05Mv3b2pVBNukMsqb5K8zXlFlutSHEe1Ve5%2BQvZ7BYOF84Fjpo%2B4rR%2BmQ0GizGUxPdMtvaw%2FGRTYVHzDllba4%2FB3UGIaxJ6FswN1BfJW0xqV%2Bb9B1Ts%2F%2B%2B4PPyggaTNziqXwyPApM1wIOmt%2Bx40vnF65afIIT0vacwiB6iTAnxh93CE1GRfenfWhADQ%3D%3D"
-              class="card-img-top rounded-1 object-fit-cover w-100" alt="img"/>
+              class="card-img-top-2 rounded-1 object-fit-cover w-100" alt="img"/>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@
           <div class="img">
             <img
               src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710417646076.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Ort6%2BPsQlZY8Wf%2FfKFl2tVT6V7WqpczhezfsgTczSDIGug6bxaoQY24K07fhn0MNqOu3HA8s%2BE7NZ2w%2FBGn5MTw9cOPCCK8jOy6wGZK4LvfGv3kihSVab6PNzs9%2B7Y3zzFok5NEdfF5M08OohMrDCWRS7%2F8PcX3Yhtu9DMMz%2BaPwMGVAJNBWkyeu9zG9zewzvkHhlNT%2BYwM5YBDw5wBpFRToJisexXcrfB9Cp69tkmeUnFTDN%2BCuDKQwafZlYrA57WVJZYnML0bjFJyqKhjsecU6V1lvxEZwVQTes0ZIxYkuQLzxeeMgO8F%2FD3ur2cZ7nmK8MG581S6drBgcngvQYQ%3D%3D"
-              class="card-img-top rounded-1 object-fit-cover w-100" alt="img"/>
+              class="card-img-top-2 rounded-1 object-fit-cover w-100" alt="img"/>
           </div>
         </div>
         <div class="col-md-6 text-center align-self-center">
@@ -161,6 +161,9 @@ export default {
 .card-img-top {
   max-height: 100%;
 }
+.card-img-top-2 {
+  max-height: 100%;
+}
 .h4 {
   color: #ffa500;
 }
@@ -187,6 +190,9 @@ export default {
   .card-img-top {
     width: 200px;
   }
+  .card-img-top-2 {
+    height: 200px;
+  }
 }
 @media (max-width: 375px) {
   .img-women {
@@ -194,6 +200,12 @@ export default {
   }
   .text-pada {
     width: 275px;
+  }
+  .img-go {
+    text-align: center;
+  }
+  .mg-eat-img {
+    display: none;
   }
 }
 </style>
