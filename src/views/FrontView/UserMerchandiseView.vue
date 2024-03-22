@@ -114,6 +114,12 @@ export default {
 .card-img-top {
   height: 200px;
 }
+.list-group-item.active {
+  background-color: #FFB2B2;
+}
+.cart {
+  outline: none;
+}
 
 @media (max-width: 1400px) {
   .list-change {

@@ -120,9 +120,65 @@
     </div>
   </section>
   <section>
+    <h4 class="text-center mt-10">除了泡芙我們還有<span class="sapn">✓</span></h4>
+    <div class="img-product mb-7">
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-md-4 mt-md-5 mb-5">
+                <div class="box border-bottom-0">
+                  <img
+                    src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1711106985204.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Xg24l3rtqODidwg83%2BSWjOSTg1pFYCCMUTjPsZVpmc62llj%2FId3CatPahMm6IQPAJ60jXHLc21mf5BQfbaIrAcILWje0f1lYZIHZsEtIzfL63x%2BgWA9jVeUwrxbzPehqVAc5U9yVEkuqByPg7gpA0StJ06F3jKZ7v4YN6uaUsLSH8Hb1BypxMjjeomFQ%2FZTtInTq7Iddj1vUJgpqKF7wV1jEVKcBw7K17l3XipV2ltSnqL6jkgtmqHo65x3sGbtWrSURmTmQ8P%2FwYSUeqW5Mt0U8yMsLUzZa0%2F8%2F87ylyjPgGPAV2P3LptuEE0Joguc6o1RwTJxwXI9AKF7Bv7WRJA%3D%3D"
+                    class="card-img-top-3 object-fit-cover rounded-0 border"
+                    alt="..."
+                  />
+                  <div class="card-body text-center">
+                    <div class="info flex-row justify-content-center align-items-center">
+                      <h4>蛋糕</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mt-md-5">
+                <div class="box border-bottom-0">
+                  <img
+                    src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1711106902045.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=gjR6q3nKtb2LARz9xEORF8GLy6eFV2%2F6%2FcvL1C3HH4QHma28STDdH9DgSvpLx2%2FsYZNAgy%2BZIMF0XqMH5%2BP%2BTjN%2BJYWgeKct1onCnn8BihWrrC9KIWvWTgrPSR%2FdnHfwHwiqGzZ758JNaHY%2FRiLwKnhi%2F6y6AcmfOhKtlkFSe8oPElCCUGnUolUloNkZJw%2BSIliLkXzrfavTe1i3zQNFke%2FPOqgKsgiQeFCqY2N6la5zTBjVro78gj1V45sjuEioaPbsVdFX0UKzgR%2F6Zt1Half10UDfm5wJ2qtYcsIpBIKhoY%2FY0uU9YVajXT6B%2BU4h5%2B%2BbynEkpNVQUDorfVYIkw%3D%3D"
+                    class="card-img-top-3 object-fit-cover rounded-0 border"
+                    alt="..."
+                  />
+                  <div class="card-body text-center">
+                    <div class="info flex-row justify-content-center align-items-center">
+                      <h4>餅乾</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mt-md-5">
+                <div class="box border-bottom-0">
+                  <img
+                    src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1711107318223.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=RPDAVv76OTTnFBROFmfmq2brZ7dBuh8oTjabN4NG%2BD4jmYComjUjrMyVnYld9guYW%2FkCd16ZaUSqos84BTLyrUAiSiCD0WXem6RP33LNaexji%2Bq7cJ9iBx7N%2BCYCkXprNj7CvIH1FFTe4OI0eqhxoUzORbhbWJ1rpfQUNkneNwytn25eqSyMikpRWcmoFwYOyO6PShz2X8j%2BAhV%2BPUvVDN3tronL3TgWb8jLDUgkikVOES%2FwlR1ZBJCsLYXzbky1gpa2U%2FSvO7%2FKEA6jZwhT6n46iGNNwqem7u4vki2B0fl9BwvjHHt151izqCgOF5D97rbAkXRZKzY4XrebHwDonQ%3D%3D"
+                    class="card-img-top-3 object-fit-cover rounded-0 border"
+                    alt="..."
+                  />
+                  <div class="card-body text-center">
+                    <div class="info flex-row justify-content-center align-items-center">
+                      <h4>特調飲品</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="container">
       <div class="row justify-content-center mt-5">
-        <div class="col-md-3 align-self-center">
+        <div class="col-md-3 align-self-center rounded-circle">
           <RouterLink class="products nav-item
             nav-link" to="/user/merchandise">
             <h2 class="img-go">立刻選購 ⇨</h2>
@@ -151,6 +207,7 @@ export default {
 </script>
 
 <style scoped>
+
 .img-women {
   max-height: 400px;
   max-width: 400px;
@@ -165,7 +222,38 @@ export default {
   max-height: 100%;
 }
 .h4 {
-  color: #ffa500;
+  color: #FFE624;
+}
+.sapn {
+  color: #FF6336;
+}
+.img-product {
+  background-color: #E4E5E6;
+}
+.box {
+  position: relative;
+  max-width: 300px;
+  max-height: 200px;
+  color: #555;
+}
+.info {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  &:hover{
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+}
+.card-img-top-3 {
+  width: 100%;
+  max-height: 200px;
 }
 .products:link{
   color: #F5A5A4;

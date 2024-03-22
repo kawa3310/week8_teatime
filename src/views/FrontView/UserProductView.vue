@@ -177,6 +177,12 @@ export default {
 
 <style scoped>
 @import '@/assets/css/hoverStyle.scss';
+span {
+  color: rgba(33, 37, 41, 0.75);
+}
+.breadcrumb-item.active {
+  color: #373232;
+}
 .img-product {
   height: 400px;
   width: 400px;

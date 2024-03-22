@@ -14,7 +14,7 @@
         <div class="navbar-body my-2">
           <ul class="navbar-nav text-center text-nowrap">
             <li class="nav-item me-3">
-              <RouterLink class="nav-link" to="/user/home">關於TeaTime
+              <RouterLink class="nav-link" to="/user/about">關於本店
               </RouterLink>
             </li>
             <li class="nav-item me-3">
