@@ -174,7 +174,23 @@
       </div>
     </div>
   </section>
-
+  <section>
+  <div class="bg-dark text-white position-relative">
+    <img class="object-fit-cover card-img card-vouher" alt="..."
+    src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1711180904224.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=p57bWLtm2jCWT51rx4DkzwGWujev0OnZGlmg6Pzf9lLyz%2FNkMnAUwxkVH0a6AR%2B5NoIReEaS2k%2F%2Fw96uR2G1YIinsR%2Fl3QOoo%2FknO5T12M4EgKPPKYVujpdNW5ZiRtZJXJPfnqJAGXMupQtK3Pkf0taKn2D9mHIu%2BKbQTdWNxxs6LuDbcP5zETd3o%2FItacp82VVUQ5kHrIMtUD%2B%2BGzJQjanZ8IUJ4LC%2FViFsomFQe53uo4UGhk7oTtGAudkrqQ4wigtucgHys0x8jG5q1l8sVivjEtx2qBsCJCbTPu7uOHFPScrNJ9aPTEYsHjfU%2B0Uiv2%2B2y7j791RbtPtwmeL4RA%3D%3D">
+  <div class="card-img-overlay">
+    <h4 class="text-center">初次訂購可享5％優惠</h4>
+    <div class="card-total d-flex justify-content-end">
+      <div class="col-7">
+        <div class="input-group input-group-sm mb-3">
+          <button type="button" @click="copyCuponCode('PUFFY123')" class="btn btn-danger rounded-0"
+          >點我領取</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
   <section>
     <div class="container">
       <div class="row justify-content-center mt-5">
@@ -201,8 +217,25 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
 
 export default {
+  methods: {
+    copyCuponCode(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          Swal.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500,
+            icon: 'success',
+            title: '以複製優惠卷',
+          });
+          return 'text';
+        });
+    },
+  },
 };
 </script>
 
@@ -267,6 +300,17 @@ export default {
 .home {
   margin: 0 auto;
 }
+.card-vouher {
+  max-height: 400px;
+}
+.card-img-overlay {
+  margin-top: 150px;
+}
+.input-group {
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+
 @media (max-width: 768px) {
   p{
     word-wrap: break-word;
@@ -281,6 +325,10 @@ export default {
   .card-img-top-2 {
     height: 200px;
   }
+  .input-group {
+    margin-left: 0 auto;
+    margin-top: 10px;
+  }
 }
 @media (max-width: 375px) {
   .img-women {
@@ -294,6 +342,16 @@ export default {
   }
   .mg-eat-img {
     display: none;
+  }
+  .card-vouher {
+  max-height: 400px;
+  }
+  .input-group {
+    margin-left: 0 auto;
+    margin-top: 10px;
+  }
+  .card-img-overlay {
+  margin-top: 70px;
   }
 }
 </style>
