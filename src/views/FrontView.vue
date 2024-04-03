@@ -1,6 +1,6 @@
 <template>
-  <NavbarComponents></NavbarComponents>
-  <RouterView></RouterView>
+  <NavbarComponents/>
+  <RouterView/>
   <div class="footer bg-dark">
       <div class="container">
       <div class="d-flex align-items-center justify-content-center text-white py-5">

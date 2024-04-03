@@ -1,40 +1,40 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"></VueLoading>
-  <div class="container mt-md-5 mt-3 mb-5">
-    <ul class="category list-unstyled d-flex justify-content-center mt-4 mb-5">
-      <li class="list-change list-group list-group-flush border"
-      v-for="(item,key) in filter.list" :key="key">
-        <a
-        class="list-group-item px-3 py-1 rounded-0"
-        :class="activeClass == key ? 'active' : ''"
-        @click.prevent="changeCategory(item,key)">{{ item }}</a>
-      </li>
-    </ul>
+  <div class="container my-5">
+    <div class="d-flex justify-content-center">
+      <ul class="list-group list-group-horizontal-sm my-5">
+        <li class="list-change list-group list-group-flush m-2 border"
+        v-for="(item,key) in filter.list" :key="key">
+          <a
+          class="list-group-item rounded-0"
+          :class="activeClass == key ? 'active' : ''"
+          @click.prevent="changeCategory(item,key)">{{ item }}</a>
+        </li>
+      </ul>
+    </div>
     <div class="row row-cols-3 row-cols-md-3 g-4 mt-2 justify-content-center">
       <div class="col-img col"
       v-for="item in products" :key="item.id">
         <div class="card-body bg-body border rounded-0">
           <div class="box">
-            <RouterLink :to="`/user/product/${item.id}`" class="link">
-              <img :src="item.imageUrl"
-              class="img card-img-top object-fit-cover rounded-0">
+            <RouterLink :to="`/product/${item.id}`" class="link">
+              <img :src="item.imageUrl" :alt="item.imageUrl"
+              class="img img-fluid card-img-top object-fit-cover rounded-0">
               <div class="info flex-row justify-content-center align-items-center">
                 <p><i class="bi bi-search"></i>商品詳細</p>
               </div>
             </RouterLink>
           </div>
-          <RouterLink :to="`/user/product/${item.id}`" class="link">
             <div class="p-3">
+              <RouterLink :to="`/product/${item.id}`" class="link">
               <h6 class="title text-top fs-7">
                 {{ item.title }}
               </h6>
-              <p class="card-text mt-1 fs-8">NT${{ item.price }}</p>
+              <p class="card-text mt-3 fs-8">NT${{ item.price }}</p>
+              </RouterLink>
+              <button type="button" class="btn btn-outline-danger my-4 w-100 rounded-0"
+              @click="addCart(item.id)">加入購物車</button>
             </div>
-          </RouterLink>
-          <div class="mb-4" style="text-align:center">
-            <button type="button" class="btn btn-outline-danger rounded-0"
-            @click="addCart(item.id)">加入購物車</button>
-          </div>
         </div>
       </div>
     </div>
@@ -108,37 +108,17 @@ export default {
 
 <style scoped>
 @import '@/assets/css/hoverStyle.scss';
+a {
+  cursor: pointer;
+}
 .col-img {
   width: 15rem;
 }
 .card-img-top {
   height: 200px;
+  background-size: cover;
 }
 .list-group-item.active {
   background-color: #FFB2B2;
-}
-.cart {
-  outline: none;
-}
-
-@media (max-width: 1400px) {
-  .list-change {
-    padding: 0 auto;
-    margin: 0px 0px 0px 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .list-change {
-    padding: 0 auto;
-    margin: 0px 0px 0px 20px;
-  }
-}
-
-@media (max-width: 365px) {
-  .list-change {
-    padding: 0 auto;
-    margin: 0px 0px 0px -10px;
-  }
 }
 </style>

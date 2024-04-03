@@ -28,7 +28,6 @@
 </template>
 
 <script>
-import 'bootstrap/scss/bootstrap.scss';
 import { Modal } from 'bootstrap';
 
 export default {

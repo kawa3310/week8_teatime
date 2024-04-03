@@ -2,7 +2,8 @@
   <VueLoading :active="isloading" :z-index="1060"></VueLoading>
   <div class="container px-6">
     <div class="text-end mt-4">
-      <button class="btn btn-outline-secondary" @click="openModel('new')">
+      <button type="button"
+      class="btn btn-outline-secondary" @click="openModel('new')">
         建立新的產品
       </button>
     </div>
@@ -90,23 +91,6 @@ export default {
     };
   },
   methods: {
-    cheakLongin() {
-      axios.post(`${VITE_URL}/api/user/check`)
-        .then(() => {
-          this.getData();
-        })
-        .catch((err) => {
-          Swal.fire({
-            toast: true,
-            position: 'center',
-            showConfirmButton: false,
-            timer: 1500,
-            icon: 'error',
-            title: err.response.data.message,
-          });
-          this.$router.push('/login');
-        });
-    },
     getData(page = 1) {
       this.isloading = true;
       axios.get(`${VITE_URL}/api/${VITE_PATH}/admin/products?page=${page}`)
@@ -213,7 +197,7 @@ export default {
   mounted() {
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)kawaToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
     axios.defaults.headers.common.Authorization = token;
-    this.cheakLongin();
+    this.getData();
   },
   components: {
     PaginationModal,
@@ -222,5 +206,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

@@ -81,23 +81,6 @@ export default {
     };
   },
   methods: {
-    cheakLongin() {
-      axios.post(`${VITE_URL}/api/user/check`)
-        .then(() => {
-          this.getOrders();
-        })
-        .catch((err) => {
-          this.$router.push('/');
-          Swal.fire({
-            toast: true,
-            position: 'center',
-            showConfirmButton: false,
-            timer: 1500,
-            icon: 'error',
-            title: err.response.data.message,
-          });
-        });
-    },
     getOrders(page = 1) {
       this.isloading = true;
       axios.get(`${VITE_URL}/api/${VITE_PATH}/admin/orders?page=${page}`)
@@ -107,7 +90,7 @@ export default {
           this.pages = res.data.pagination;
         })
         .catch((err) => {
-          this.isloading = true;
+          this.isloading = false;
           Swal.fire({
             toast: true,
             position: 'center',
@@ -196,7 +179,7 @@ export default {
   mounted() {
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)kawaToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
     axios.defaults.headers.common.Authorization = token;
-    this.cheakLongin();
+    this.getOrders();
   },
   components: {
     PaginationModal,

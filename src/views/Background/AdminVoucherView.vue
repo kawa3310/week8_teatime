@@ -56,7 +56,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import VoucherModal from '@/components/VoucherModal.vue';
 import DelProductModal from '@/components/DelProductModal.vue';
-import PaginationModal from '../../components/PaginationModal.vue';
+import PaginationModal from '@/components/PaginationModal.vue';
 
 const { VITE_URL, VITE_PATH } = import.meta.env;
 export default {
@@ -75,23 +75,6 @@ export default {
     };
   },
   methods: {
-    cheakLongin() {
-      axios.post(`${VITE_URL}/api/user/check`)
-        .then(() => {
-          this.getVoucherData();
-        })
-        .catch((err) => {
-          this.$router.push('/login');
-          Swal.fire({
-            toast: true,
-            position: 'center',
-            showConfirmButton: false,
-            timer: 1500,
-            icon: 'error',
-            title: err.response.data.message,
-          });
-        });
-    },
     getVoucherData() {
       this.isloading = true;
       axios.get(`${VITE_URL}/api/${VITE_PATH}/admin/coupons`)
@@ -195,7 +178,7 @@ export default {
   mounted() {
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)kawaToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
     axios.defaults.headers.common.Authorization = token;
-    this.cheakLongin();
+    this.getVoucherData();
   },
   components: {
     VoucherModal,
@@ -204,5 +187,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

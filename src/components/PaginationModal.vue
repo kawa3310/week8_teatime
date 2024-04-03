@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import 'bootstrap/scss/bootstrap.scss';
 
 export default {
   props: ['pages'],

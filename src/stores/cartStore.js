@@ -18,6 +18,16 @@ export default defineStore('cartStore', {
           this.cart = res.data.data.carts;
           this.final_total = res.data.data.final_total;
           this.total = res.data.data.total;
+        })
+        .catch((error) => {
+          Swal.fire({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500,
+            icon: 'error',
+            title: error.response.data.message,
+          });
         });
     },
     getProduct() {
@@ -28,7 +38,6 @@ export default defineStore('cartStore', {
           this.recommendProduct();
         })
         .catch((error) => {
-          this.isloading = false;
           Swal.fire({
             toast: true,
             position: 'top-end',
@@ -57,7 +66,6 @@ export default defineStore('cartStore', {
           });
         })
         .catch((error) => {
-          this.isloading = false;
           Swal.fire({
             toast: true,
             position: 'top-end',

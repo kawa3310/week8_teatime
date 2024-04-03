@@ -21,7 +21,6 @@
                   class="form-control"
                     placeholder="請輸入圖片連結">
                 </div>
-
                 <div class="mb-3">
                 <label for="file" class="form-label">上傳圖片
                   <i class="fas fa-spinner fa-spin"></i>
@@ -29,7 +28,6 @@
                 <input type="file" class="form-control mb-4" id="file" ref="fileInput"
                 @change="uploadPhotos"/>
                 </div>
-
               <img class="img-fluid" :src="emitProduct.imageUrl" :alt="emitProduct.imageUrl">
               <h3 class="mb-3">新增多圖</h3>
               <template v-if="Array.isArray(emitProduct.imagesUrl)">
@@ -39,27 +37,27 @@
                     <input type="text" v-model="emitProduct.imagesUrl[key]"
                     class="form-control" placeholder="請輸入圖片連結">
                   </div>
-                  <img :src="img" alt="img" class="img-fluid">
+                  <img :src="img" :alt="img" class="img-fluid">
                 </div>
                 <template v-if="!emitProduct.imagesUrl.length ||
                 emitProduct.imagesUrl[emitProduct.imagesUrl.length - 1]">
-                  <button class="btn btn-outline-primary btn-sm d-block w-100"
+                  <button type="button" class="btn btn-outline-primary btn-sm d-block w-100"
                     @click="emitProduct.imagesUrl.push('')">新增圖片
                   </button>
                 </template>
                 <template v-else>
-                  <button class="btn btn-outline-danger btn-sm d-block w-100"
+                  <button type="button" class="btn btn-outline-danger btn-sm d-block w-100"
                   @click="emitProduct.imagesUrl.pop()">
                     刪除圖片
                   </button>
                 </template>
               </template>
               <template v-else>
-                <button class="btn btn-outline-primary btn-sm d-block w-100" @click="addImg">新增圖片
+                <button type="button"
+                class="btn btn-outline-primary btn-sm d-block w-100" @click="addImg">新增圖片
                 </button>
               </template>
             </div>
-
             <div class="col-sm-8">
               <VForm ref="form" class="col-md-6" v-slot="{ errors }">
                   <div class="mb-3">
@@ -115,12 +113,11 @@
                   placeholder="請輸入產品描述">
                 </textarea>
               </div>
-
               <div class="mb-3">
                 <label for="content" class="form-label">說明內容</label>
-                <textarea v-model="emitProduct.content" id="description" type="text"
+                <textarea v-model="emitProduct.content" id="content" type="text"
                 class="form-control"
-                  placeholder="請輸入說明內容">
+                placeholder="請輸入說明內容">
                 </textarea>
               </div>
               <div class="mb-3">
@@ -149,7 +146,6 @@
 
 <script>
 import axios from 'axios';
-import 'bootstrap/scss/bootstrap.scss';
 import { Modal } from 'bootstrap';
 import Swal from 'sweetalert2';
 
@@ -205,5 +201,3 @@ export default {
   },
 };
 </script>
-<style>
-</style>

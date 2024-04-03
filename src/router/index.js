@@ -3,15 +3,12 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    component: () => import('../views/LoginView.vue'),
-  },
-  {
-    path: '/user',
     component: () => import('../views/FrontView.vue'),
     children: [
       {
-        path: 'home',
+        path: '',
         component: () => import('../views/FrontView/HomeView.vue'),
+        name: 'Home',
       },
       {
         path: 'about',
@@ -31,13 +28,21 @@ const routes = [
       },
       {
         path: 'orderOut',
-        component: () => import('../views/FrontView/CheckOutView2.vue'),
+        component: () => import('../views/FrontView/OrderOut.vue'),
       },
       {
         path: 'userOut/:id',
         component: () => import('../views/FrontView/UserOrderView.vue'),
       },
+      {
+        path: 'payment',
+        component: () => import('../views/FrontView/PaymentView.vue'),
+      },
     ],
+  },
+  {
+    path: '/login',
+    component: () => import('../views/LoginView.vue'),
   },
   {
     path: '/admin',
@@ -56,6 +61,12 @@ const routes = [
         component: () => import('../views/Background/AdminVoucherView.vue'),
       },
     ],
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: {
+      name: 'Home',
+    },
   },
 ];
 

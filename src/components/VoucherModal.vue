@@ -12,7 +12,6 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"
           aria-label="Close"></button>
         </div>
-
         <div class="modal-body">
           <VForm ref="form" class="col-md-6" v-slot="{ errors }">
               <div class="mb-3">
@@ -31,27 +30,24 @@
                 </VField>
                 <ErrorMessage name="優惠碼" class="invalid-feedback"></ErrorMessage>
               </div>
-
               <div class="mb-3">
                 <label for="due_date">到期日</label>
                 <input type="date" class="form-control" id="due_date" v-model="due_date">
               </div>
-
               <div class="mb-3">
                 <label for="price" class="form-label">折扣</label>
-                <VField id="price" max="75" name="折扣百分比" type="number" class="form-control"
+                <VField id="price" min="1" max="75" name="折扣百分比" type="number" class="form-control"
                     :class="{ 'is-invalid': errors['折扣百分比'] }"
                     placeholder="請輸入折扣百分比" rules="required"
                     v-model="emitVoucher.percent">
                 </VField>
                 <ErrorMessage name="折扣百分比" class="invalid-feedback"></ErrorMessage>
               </div>
-
               <div class="mb-3">
                 <div class="form-check">
                   <input :true-value="1" :false-value="0"
                   v-model="emitVoucher.is_enabled" id="is_enabled"
-                  class="form-check-input" type="checkbox">
+                  class="form-check-input" type="checkbox" :checked="0==1">
                   <label class="form-check-label" for="is_enabled">是否啟用</label>
                 </div>
               </div>
@@ -71,8 +67,6 @@
 </template>
 
 <script>
-
-import 'bootstrap/scss/bootstrap.scss';
 import { Modal } from 'bootstrap';
 
 export default {

@@ -42,6 +42,10 @@
                       <td>{{ emitOrder.user.address }}</td>
                     </tr>
                     <tr>
+                      <th>備注</th>
+                      <td>{{ emitOrder.message }}</td>
+                    </tr>
+                    <tr>
                       <th>付款狀態</th>
                         <td>
                           <span v-if="emitOrder.paid_date">已付款</span>
@@ -94,8 +98,8 @@
       </div>
     </div>
   </template>
+
 <script>
-import 'bootstrap/scss/bootstrap.scss';
 import { Modal } from 'bootstrap';
 
 export default {

@@ -59,28 +59,6 @@ export default {
           });
         });
     },
-    cheakLongin() {
-      axios.post(`${VITE_URL}/api/user/check`)
-        .then(() => {
-          this.$router.push('admin/products');
-        })
-        .catch((err) => {
-          Swal.fire({
-            toast: true,
-            position: 'center',
-            showConfirmButton: false,
-            timer: 1500,
-            icon: 'error',
-            title: err.response.data.message,
-          });
-          this.$router.push('/');
-        });
-    },
-  },
-  mounted() {
-    this.cheakLongin();
   },
 };
 </script>
-
-<style scoped></style>

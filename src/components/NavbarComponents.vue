@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <h4 class="m-0">
         <RouterLink class="router-link nav-link active navbar-brand"
-        to="/user/home">TeaTime</RouterLink>
+        to="/">TeaTime</RouterLink>
       </h4>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNavAltMarkup"
@@ -14,25 +14,20 @@
         <div class="navbar-body my-2">
           <ul class="navbar-nav text-center text-nowrap">
             <li class="nav-item me-3">
-              <RouterLink class="nav-link" to="/user/about">關於本店
+              <RouterLink class="nav-link" to="/about">關於本店
               </RouterLink>
             </li>
             <li class="nav-item me-3">
-              <RouterLink class="nav-link" to="/user/merchandise">尋找甜點</RouterLink>
+              <RouterLink class="nav-link" to="/merchandise">尋找甜點</RouterLink>
             </li>
             <li class="nav-item-icon me-3 position-relative">
-              <RouterLink class="nav-link py-1" :to="`/user/cart`">
+              <RouterLink class="nav-link py-1" :to="`/cart`">
                 <i class="bi bi-cart-fill">
                   <span class="nav-icon badge rounded-pill fw-normal translate-middle bg-danger">
                     {{ this.cart.length }}
                     <span class="visually-hidden">unread messages</span>
                   </span>
                 </i>
-              </RouterLink>
-            </li>
-            <li class="nav-item me-3">
-              <RouterLink class="nav-link py-1" :to="`/`">
-                <i class="bi bi-person-lines-fill"></i>
               </RouterLink>
             </li>
           </ul>

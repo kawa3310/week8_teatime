@@ -1,12 +1,11 @@
 import './assets/all.scss';
 import 'bootstrap';
-import 'bootstrap/scss/bootstrap.scss';
 import 'vue-loading-overlay/dist/css/index.css';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 import { BootstrapIconsPlugin } from 'bootstrap-icons-vue';
 
 import {
