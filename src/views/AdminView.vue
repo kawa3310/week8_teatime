@@ -1,5 +1,5 @@
 <template>
-  <adminNavbarComponents/>
+  <AdminNavbarComponents/>
   <RouterView v-if="checkSuccess"/>
 
 </template>
@@ -7,7 +7,7 @@
 <script>
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import adminNavbarComponents from '@/components/AdminNavbarComponents.vue';
+import AdminNavbarComponents from '@/components/AdminNavbarComponents.vue';
 
 const { VITE_URL } = import.meta.env;
 
@@ -52,7 +52,7 @@ export default {
     this.cheakLongin();
   },
   components: {
-    adminNavbarComponents,
+    AdminNavbarComponents,
   },
 };
 </script>
