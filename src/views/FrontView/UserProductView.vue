@@ -1,10 +1,10 @@
 <template>
-  <VueLoading :active="isloading" :z-index="1060"></VueLoading>
+  <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container mt-3">
     <div class="row justify-content-end">
       <div class="col-md-11">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb px-0 mb-0 py-2 fs-8 justify-content-start">
+            <ol class="breadcrumb px-0 mb-0 py-2 fs-7 justify-content-start">
               <li class="breadcrumb-item">
                 <RouterLink class="text-muted" :to="`/`">首頁</RouterLink>
               </li>
@@ -26,20 +26,21 @@
           </div>
           <div class="col-md-5">
             <div class="col">
-              <h5 class="text-title mt-4">{{ product.title }}
-                <span class="badge fs-9 rounded-3 bg-success text-light"
+              <h5>{{ product.title }}
+                <span class="badge fs-8 rounded-3 bg-success text-light"
                 >{{ product.category }}</span>
               </h5>
-                <div class="mb-4 fs-8 text-title">
+                <div class="mb-4 fs-7">
                   <span>{{ product.description }}</span>
                   <hr>
-                  <p class="text-title-2 fw-bold fs-7">NT$
+                  <p class="fw-bold fs-7">NT$
                     <span class="price fs-3">{{ product.price }}</span> 元
                   </p>
                 </div>
-                <div class="item-value text-title">
-                  <span class="fs-8">數量：</span>
-                    <select name="number" id="number" v-model.number="qty">
+                <div class="d-flex">
+                  <span class="fs-7">數量：</span>
+                    <select class="form-select rounded-0" aria-labe="數量" style="width: 80px;"
+                    name="number" id="number" v-model.number="qty">
                       <option v-for="index in 10" :key="index" :value="index"
                       e>{{index}}</option>
                     </select>
@@ -67,22 +68,22 @@
       </div>
     </div>
   </section>
-      <div class="row g-4 justify-content-center p-6">
+      <div class="row justify-content-center p-8">
         <span class="h4 text-start">螞蟻人還喜歡</span>
         <hr>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-2">
           <div class="col-12 col-md-3" v-for="item in recommend" :key="item.id">
             <RouterLink :to="`/product/${item.id}`" class="link">
-              <div class="card-body h-100 bg-body border rounded-0">
+              <div class="card h-100 bg-body border rounded-0 ms-2">
                 <div class="box">
                   <img :src="item.imageUrl" :alt="item.imageUrl"
                   class="img img-fluid card-img-top object-fit-cover rounded-0">
                 </div>
                   <div class="p-3">
-                    <h6 class="title text-top  fs-7">
+                    <h6 class="title text-top">
                       {{ item.title }}
                     </h6>
-                    <p class="card-text mt-1 fs-8">NT${{ item.price }}</p>
+                    <p class="card-text fs-7">NT${{ item.price }}</p>
                   </div>
               </div>
             </RouterLink>
@@ -174,7 +175,7 @@ span {
   color: #FB7070;
 }
 .box {
-  height: 130px;
+  height: 160px;
 }
 .card-img-top {
   max-height: 100%;

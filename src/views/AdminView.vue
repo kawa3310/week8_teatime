@@ -1,6 +1,6 @@
 <template>
   <adminNavbarComponents/>
-  <RouterView v-if="checkSuccess"></RouterView>
+  <RouterView v-if="checkSuccess"/>
 
 </template>
 
@@ -19,8 +19,10 @@ export default {
   },
   methods: {
     cheakLongin() {
+      const token = document.cookie.replace(/(?:(?:^|.*;\s*)kawaToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
       axios.post(`${VITE_URL}/api/user/check`)
         .then(() => {
+          axios.defaults.headers.common.Authorization = token;
           Swal.fire({
             toast: true,
             position: 'center',
@@ -40,6 +42,7 @@ export default {
             icon: 'error',
             title: err.response.data.message,
           });
+          this.$router.push('/login');
         });
     },
   },

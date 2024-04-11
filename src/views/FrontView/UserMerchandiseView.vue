@@ -1,5 +1,5 @@
 <template>
-  <VueLoading :active="isloading" :z-index="1060"></VueLoading>
+  <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container my-5">
     <div class="d-flex justify-content-center">
       <ul class="list-group list-group-horizontal-sm my-5">
@@ -15,7 +15,7 @@
     <div class="row row-cols-3 row-cols-md-3 g-4 mt-2 justify-content-center">
       <div class="col-img col"
       v-for="item in products" :key="item.id">
-        <div class="card-body bg-body border rounded-0">
+        <div class="card bg-body border rounded-0">
           <div class="box">
             <RouterLink :to="`/product/${item.id}`" class="link">
               <img :src="item.imageUrl" :alt="item.imageUrl"
@@ -27,12 +27,12 @@
           </div>
             <div class="p-3">
               <RouterLink :to="`/product/${item.id}`" class="link">
-              <h6 class="title text-top fs-7">
+              <h6 class="fs-7">
                 {{ item.title }}
               </h6>
-              <p class="card-text mt-3 fs-8">NT${{ item.price }}</p>
+              <span>NT${{ item.price }}</span>
               </RouterLink>
-              <button type="button" class="btn btn-outline-danger my-4 w-100 rounded-0"
+              <button type="button" class="btn btn-outline-danger w-100 mt-1 rounded-0"
               @click="addCart(item.id)">加入購物車</button>
             </div>
         </div>
@@ -115,7 +115,7 @@ a {
   width: 15rem;
 }
 .card-img-top {
-  height: 200px;
+  height: 160px;
   background-size: cover;
 }
 .list-group-item.active {

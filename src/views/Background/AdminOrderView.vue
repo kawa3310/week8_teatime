@@ -1,5 +1,5 @@
 <template>
-  <VueLoading :active="isloading" :z-index="1060"></VueLoading>
+  <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container px-6">
     <div class="text-end mt-4">
       <table class="table mt-4">
@@ -177,8 +177,6 @@ export default {
     },
   },
   mounted() {
-    const token = document.cookie.replace(/(?:(?:^|.*;\s*)kawaToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-    axios.defaults.headers.common.Authorization = token;
     this.getOrders();
   },
   components: {

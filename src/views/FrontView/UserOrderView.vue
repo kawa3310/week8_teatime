@@ -1,5 +1,5 @@
 <template>
-  <VueLoading :active="isloading" :z-index="1060"></VueLoading>
+  <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container pb-5">
     <div class="row justify-content-center mb-5">
       <div class="col-9 col-md-8 position-relative mt-6">
@@ -21,7 +21,7 @@
         </button>
         <button type="button" class="position-absolute top-0
         start-100 translate-middle btn btn-sm btn-secondary rounded-pill"
-        style="width: 3rem; height: 3rem; background-color: black">
+        style="width: 2rem; height: 2rem; background-color: black">
           <i class="bi bi-credit-card-2-back"></i>
         </button>
       </div>

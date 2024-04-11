@@ -1,5 +1,4 @@
 import './assets/all.scss';
-import 'bootstrap';
 import 'vue-loading-overlay/dist/css/index.css';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
@@ -34,6 +33,13 @@ configure({
   validateOnInput: true,
 });
 setLocale('zh_TW');
+
+defineRule('positive', (value) => {
+  if (value >= 0) {
+    return true;
+  }
+  return '請輸入正數值';
+});
 
 const app = createApp(App);
 

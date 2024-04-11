@@ -57,12 +57,12 @@ export default {
 .nav-link {
   font-weight: 500;
   position: relative;
-  color: #ACA8A7;
+  color: #A98B73;
   &:hover {
-    color: #D0D0D0  !important;
+    color: #9A6852  !important;
   }
   &.router-link-exact-active {
-    color: #D0D0D0  !important;
+    color: #876D5A  !important;
   }
 }
 .nav-icon {

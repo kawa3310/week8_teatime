@@ -1,7 +1,7 @@
 <template>
   <NavbarComponents/>
   <RouterView/>
-  <div class="footer bg-dark">
+  <div class="footer" style="background-color: #A98B73;">
       <div class="container">
       <div class="d-flex align-items-center justify-content-center text-white py-5">
         <ul class="d-flex list-unstyled h4 pe-3">

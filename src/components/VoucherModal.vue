@@ -38,7 +38,7 @@
                 <label for="price" class="form-label">折扣</label>
                 <VField id="price" min="1" max="75" name="折扣百分比" type="number" class="form-control"
                     :class="{ 'is-invalid': errors['折扣百分比'] }"
-                    placeholder="請輸入折扣百分比" rules="required"
+                    placeholder="請輸入折扣百分比" rules="positive"
                     v-model="emitVoucher.percent">
                 </VField>
                 <ErrorMessage name="折扣百分比" class="invalid-feedback"></ErrorMessage>

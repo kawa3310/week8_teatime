@@ -1,5 +1,5 @@
 <template>
-  <VueLoading :active="isloading" :z-index="1060"></VueLoading>
+  <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container pb-5" v-if="cart.total !== 0">
     <div class="row justify-content-center mb-5">
       <div class="col-9 col-md-8 position-relative mt-6">
@@ -10,8 +10,8 @@
         </div>
         <div type="button" class="position-absolute top-0
         start-0 translate-middle btn btn-sm btn-dark rounded-pill"
-        style="width: 3rem; height: 3rem;">
-          <div class="mt-2">
+        style="width: 2rem; height: 2rem;">
+          <div>
             <i class="bi bi-cart"></i>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="d-flex flex-column justify-content-center">
           <div class="shadow-sm mb-5 bg-body rounded border overflow-hidden"
               v-for="cart in cart.carts" :key="cart.id">
-            <div class="row align-items-center px-1 py-1">
+            <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <img :src="cart.product.imageUrl"
                 alt="商品圖片" class="img-product w-100">
@@ -44,34 +44,34 @@
               <div class="col-12 col-md-8">
                 <div class="p-3">
                   <div class="d-flex justify-content-between">
-                    <p class="mb-0 lh-lg fw-bold">
+                    <span class=" lh-lg">
                       {{ cart.product.title }}
-                    </p>
+                    </span>
                     <a type="button"
                     @click="delCart(cart.id)">
                       <i class="bi-icon bi bi-trash"></i>
                     </a>
                   </div>
-                  <p class="mb-1 fs-8 text-muted mb-3">{{ cart.product.content }}</p>
+                  <div class="fs-8 mb-3">售價 NT${{ cart.total/cart.qty }}</div>
                   <div class="row">
                     <div class="col-md-8">
                       <div class="input-group d-flex">
-                        <button class="btn d-flex rounded-0 border-0 px-md-0"
-                        type="button"
-                        @click="reviseCart(cart, cart.qty + 1)">
-                          <i class="bi bi-plus fs-7"></i>
-                        </button>
-                        <span class="form-control text-center mx-2"
-                          placeholder="" min="1">{{ cart.qty }}</span>
-                        <button class="btn d-flex rounded-0 border-0 px-md-0"
+                        <button class="btn d-flex rounded-0" style="border-color: black;"
                         type="button"
                         @click="reviseCart(cart, cart.qty - 1)" :disabled="cart.qty === 1">
                           <i class="bi bi-dash fs-7"></i>
                         </button>
+                        <span class="form-control text-center" style="border-color: black;"
+                          placeholder="" min="1">{{ cart.qty }}</span>
+                        <button class="btn d-flex rounded-0" style="border-color: black;"
+                        type="button"
+                        @click="reviseCart(cart, cart.qty + 1)">
+                          <i class="bi bi-plus fs-7"></i>
+                        </button>
                       </div>
                     </div>
                     <div class="col-md-4 mt-3">
-                      <div class="text-nowrap fs-8">NT ${{ cart.total/cart.qty }}</div>
+                      <div class="fs-6">總計 NT${{ cart.total }}</div>
                     </div>
                   </div>
                 </div>
@@ -135,6 +135,8 @@
 <script>
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { mapActions } from 'pinia';
+import cartStore from '@/stores/cartStore';
 
 const { VITE_URL, VITE_PATH } = import.meta.env;
 export default {
@@ -149,6 +151,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(cartStore, ['getCart']),
     getCart() {
       this.isloading = true;
       axios.get(`${VITE_URL}/api/${VITE_PATH}/cart`)
@@ -274,7 +277,7 @@ export default {
   color: black;
 }
 .img-product {
-  height: 160px;
+  height: 180px;
   object-fit: cover;
 }
 </style>

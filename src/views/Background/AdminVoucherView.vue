@@ -1,8 +1,8 @@
 <template>
-  <VueLoading :active="isloading" :z-index="1060"></VueLoading>
+  <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container">
     <div class="text-end mt-4">
-      <button class="btn btn-primary" @click="openModel('new')">
+      <button type="button" class="btn btn-primary" @click="openModel('new')">
         建立優惠卷
       </button>
     </div>
@@ -65,7 +65,7 @@ export default {
       voucher: {},
       tempVoucher: {
         title: '',
-        is_enabled: 0,
+        is_enabled: false,
         percent: 100,
         code: '',
       },
@@ -176,8 +176,6 @@ export default {
     },
   },
   mounted() {
-    const token = document.cookie.replace(/(?:(?:^|.*;\s*)kawaToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-    axios.defaults.headers.common.Authorization = token;
     this.getVoucherData();
   },
   components: {
