@@ -11,12 +11,12 @@
   </div>
   </section>
   <section>
-    <div class="row justify-content-center my-7">
+    <div class="row justify-content-center mt-7">
       <div class="col-6 col-md-3">
         <div class="img-women">
         <img
           src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712932803009.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=dLAfqjnRrEjdeZ7bpTkYy08yGhXk4%2B4akOjZlTw6pjqR21RbSD6bct6iH82epcUB0M43jb8HSUgMwzKXDbMgcMsWyplUo%2BM%2Bt9teJN%2FPphja2a1AIa3gjsUuh7rqw4PyoSWEE0ZoCH9R8Q0ZJpe6tZ1hmC%2B8GntM1OCTwK%2FY3fJj0c2vToPBwVywbQ4yVTQi7TSWA3ptlbObdYxGQcMqVppfKQ3GPph%2FJlOiDON2MgeLOV2oiE61rd%2BNVR3dzvYuXBs5gdu83Zb5ZeswGWBZXF36%2BSfn8VPfOAzDuf9apoVS25BTOAFAj%2FX2QlWjIlw5o0G535cZwARmn%2BiLJB4NsA%3D%3D"
-          class="card-title card-img-top rounded-0 img-fluid" alt="烘培師"/>
+          class="card-title  rounded-0 img-fluid" alt="烘培師"/>
         </div>
       </div>
       <div class="text-pada col-md-3 align-self-center">
@@ -31,7 +31,7 @@
         <div class="col-12 col-md my-3">
           <img
             src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712932874992.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=P1E2sLciqq7WNGRZwuFI66cIY0XcMzW7MwZ6dfs8v6HCgiaZhTcRsZS1DeW7d4F0JVEiukD1kLFh81qvn0Hc8p5p1%2F9f3tYofrosHzOs%2Fi8COlFAbEQUJpB%2FHg5HYSojGVCBQDQvi5N0H5ia2dPEQ4NZ9uGy4ZZtugk8JFKli4UHzfrrojjiCvFSIwaDUq1etm%2Fy2d%2B7yIBhZMaGzYsUPBC59dFaizQSONhy8in%2Berwyy2mcagQOxA0UOw4M4HxUNM22x0x%2BPOLGSFKyKuGE%2Biqe5PWH65z5M9KTrMzWCGPNDQywZjIyPlWOCz9M90uGoHDwWwhppGDfYPZ6e0j3cg%3D%3D"
-            class="img card-img-top-2 rounded-0 object-fit-cover w-100" alt="麵糊"/>
+            class="img rounded-0 object-fit-cover w-100" alt="麵糊"/>
         </div>
         <div class="col text-color text-center align-self-center pt-3">
           <div class="align-text-top">
@@ -44,7 +44,7 @@
         <div class="col-12 col-md  my-3 d-flex flex-column">
           <img
             src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712932948141.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=THl4XB9i2s4WuFBbdUX4QmY4QzJurv9v6%2Fn2Vf2aDvgiJK4A%2BUdrPUmxIg8XgM4zjw8CvRvRYBXzspnp%2F5JY%2BinK9gn0JGJVBGUXh7VG4omX3WSnS2YoeOlW%2Brod3AI3NeQRIiXPbQP38Ij40BMyJXOs0IaZhAX4g7H44OuSXVQVr6MYdHAqtuJXizsgfrpmE3fRQQjkhjTL4OqGiLfQAt5TwS%2FWXcYXgDTfhMRNpRKtTnWODXDKdQwDvZhGTTWFFDFyVn%2FcvozE6Tc2bn656l44%2BD645NDlKwdV27qYlR8U4dYKOtfMQShta1KidS8QVslhpPSxNGPss0Pw5weJYA%3D%3D"
-            class="img card-img-top-2 rounded-0 object-fit-cover w-100" alt="泡芙殼"/>
+            class="img rounded-0 object-fit-cover w-100" alt="泡芙殼"/>
         </div>
         <div class="col text-color d-flex flex-column text-center align-self-center pt-3">
           <div class="align-text-top">
@@ -57,7 +57,7 @@
         <div class="col-12 col-md my-3">
           <img
             src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712933003030.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=n%2B5IgWohZu1L8ET69pGAJW6uFwArdUELOuvJJzSUpFokFI%2BwT8iNCZghHNPtndgWrAXfviNdEQ7gle1JLLtedOAPVxE7j09pNfS7tqer7vJ6Kl2onDI9nuzq0dxtHtonJbQFIqeZG79j1VDFQrqR2DdyAEQGtf%2FOEbyMwAXOnvu0dtSXhNV18OVH1T5TfHbcn8FwdgcV7LF3%2FWf4SD6NgDCA4b0C%2F5TPiANsQMig63bxsRCjhYiQi7wkPRkwgPZQwnZ%2BuqBRDW4Qdo7ru4EYhszdFiI8%2BGMyacZElOsXJbt9ToL8SlGdMGVBr5cHBYoyU8LeJzKqx4bbOm5%2FhXAQfw%3D%3D"
-            class="img card-img-top-2 rounded-0 object-fit-cover w-100" alt="巧克力"/>
+            class="img rounded-0 object-fit-cover w-100" alt="巧克力"/>
         </div>
         <div class="col text-color text-center align-self-center pt-3">
           <div class="align-text-top">
@@ -70,7 +70,7 @@
         <div class="col-12 col-md my-3 d-flex flex-column">
           <img
             src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712933033984.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=Jog8p6ulEVtlmMzn1v1UQuNNUBugfmL7kX44MJw0f1mEE25s%2F3ldS6AChX6a%2FOL%2FVz3s6wlsFd%2B%2FtKcK0b0Dec0X3iQSmfzDcjMHeX7Phd5yrq78WAk%2BXXkdyTuIxq7XZMhTpoXXfZUQ0ZxpYVfFC9B9EhCchbBLNt7wv0pRnDvoeOiQ7OE6q1Xw0gAiS9gBO3L%2Fs2sit8StJenh2fQ1gFyFJqJMp4pr4%2B%2BFluO0RLRv64MJrUzUQiSoL48oheNbLi%2FnCLbHqFoE4UzCya36a3DUakho8AFwEtdtWDFA7kBwfCJRM6Y6zImNrt0TPjmE876NaTH3ZJWKlL7IRPrIHQ%3D%3D"
-            class="img card-img-top-2 rounded-0 object-fit-cover w-100" alt="鮮奶油"/>
+            class="img rounded-0 object-fit-cover w-100" alt="鮮奶油"/>
         </div>
         <div class="col text-color d-flex flex-column text-center align-self-center pt-3">
           <div class="align-text-top">
@@ -83,7 +83,7 @@
         <div class="col-12 col-md my-3">
           <img
             src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712933074993.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=pgdu45%2FSkvkFKjvKBhdQ8DMAzT541hESdDIdgdxJvz5NZJTZkC0cXP8seKi7uNFaNHDHAtgywfqSioQoaMmzsRstSLxRgzheQLL%2BrIpADTh3wh0KzidcpJoKYa9CPy%2BgzoO%2F3lKUhIBdEbNRxuIcm4JSYGfubCUDogiOupr1Kw%2Bis1e9A9V8QnRkzVcweHagCVLtzhY%2FJI9PYIurLAe86o%2F9Vw9BO9uLgwPwIkfo05SdpUZhEWHbToJaajUp6oO2CHTu4J6TIXTfPnYKjL7rIRDSDoTZq4SNNeOOI6oadHn0Xg7aq7kyigxHTFvCH1PI3JH0amMdSAXxOEhEjNIHmA%3D%3D"
-            class="img card-img-top-2 rounded-0 object-fit-cover w-100" alt="填充鮮奶油"/>
+            class="img rounded-0 object-fit-cover w-100" alt="填充鮮奶油"/>
         </div>
         <div class="col text-color text-center align-self-center pt-3">
           <div class="align-text-top">
@@ -96,14 +96,14 @@
   </section>
   <section class="mt-6">
     <div class="container">
-      <h3 class="text-center position-relative fw-bold">限量新品</h3>
+      <h3 class="text-center fw-bold">限量新品</h3>
       <div class="row justify-content-center mt-5">
-        <div class="col-10 col-md-3 position-relative m-2">
-          <div class="card rounded-0" style="width: 13rem;">
+        <div class="col-9 col-md-6 col-lg-3">
+          <div class="card rounded-0 m-2">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712058328314.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=mNfXnmUruF0Xsj5lW%2Bsfa8H2mPtK%2FiD%2BJ0BuNg1OyQx4WxLH3E%2FhlOwxQVOIjoKRqjxpblqVgxnikxflUcJKcv8T11pazqawcq7VZgFVoOdFxP06De2yuzEKRp7ve8MxVETJih4Vck9LetcJuxXCkfSKNX9VjCCl%2B0bwGP5zPC1PecsOrug7DwcqbGbKj9E3TMexzcBKqTii17bx8nQN3StgrpOVKSBlloxqOvzTUrZSokE%2Ffyyx8ZL9vthaf0iDULUUOIIVVlAmJwLgSVC2Hkq82%2FwlXIihbr2vV22CHQ2t5GBkU4R1msboAFQpzx9vYgMSupTM0Zk%2F%2F6L4NshuWg%3D%3D"
-            class="card-img-top img-puffy object-fit-cover w-100 rounded-0" alt="熊貓泡芙">
+            class="img-puffy object-fit-cover w-100 rounded-0" alt="熊貓泡芙">
             <div class="card-body text-center">
-              <h6 class="card-titl fw-bold">熊貓泡芙</h6>
+              <h6 class="card-title fw-bold">熊貓泡芙</h6>
               <RouterLink to="product/-Nryee0S1dRc6WcPQ8bM"
               class="btn btn-outline-success w-100 rounded-0">
                 商品詳細
@@ -111,10 +111,10 @@
             </div>
           </div>
         </div>
-        <div class="col-10 col-md-3 position-relative m-2">
-          <div class="card rounded-0" style="width: 13rem;">
+        <div class="col-9 col-md-6 col-lg-3">
+          <div class="card rounded-0 m-2">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710238556301.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=CTRTcsLqHPiMeAaEgrwKjSrOJzB2dy%2B8Y1s3EEHv2Vz%2BXDL23HphpmqQfG3RmZPr5PzK1p9QAMU8ULBGwXOxcVlkFNw8zSt7vKlxDttTo71TzV5L8yzK%2B%2B8W62ekWqffAEpNWig4b9p9Qm7VmqNzJy9ZuD5ulhfrkNy6NQO51VRTUhVT15fMid1M5yL%2BQtsw3TL5ejCgxDyUcHMgFyNavSHeFiIpABtWMBFsR0DcBIUtEW16htMBeVYgs5%2FtN0gXxqxWFAN1HF9b%2BN%2F8EeKyu2VCo2eojXFmGxNMggZfhXuZjhIHwRN05n%2F%2FE3Bmfbhy3M7tShoneN%2BH6gLnam8t3g%3D%3D"
-            class="card-img-top img-puffy object-fit-cover w-100 rounded-0" alt="熊狗泡芙">
+            class="img-puffy object-fit-cover w-100 rounded-0" alt="熊狗泡芙">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">熊狗泡芙</h6>
               <RouterLink to="product/-Nsm998F82atnsPhIMrK"
@@ -124,10 +124,10 @@
             </div>
           </div>
         </div>
-        <div class="col-10 col-md-3 position-relative m-2">
-          <div class="card rounded-0" style="width: 13rem;">
+        <div class="col-9 col-md-6 col-lg-3">
+          <div class="card rounded-0 m-2">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710329367680.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=hp70elX%2FK979BpuWaTCQBl30MGlHJ85Qev9OI6FD4y4CG4o0WmIx4v7fHPKSb%2B5Y7wGIpPOIzNHFnI9bbWqYUtpxpjjmdI1hmhSr0uYwC%2FsgstGKaggFuvZcL%2BxbuxzuwC7WKN9y66FqTm%2BQmp%2Bip3Jdl1cwuTuDRpL4ecORMI6Ety%2BxPohcYeSsnxxxx9EEIhK62OIEIgngJwB35VfYVTWMkSGotI1ZQUgrCRuqdzC8LmBdpvHMNjUwy8fV%2BQhd3pJGEAtKzCjNjXJSbVcMU%2Bxz2np9WG6hGbPTnco0y23jroD0whK3gu2OwEwLAB8EvNiq2yHrKZIWSHzwFtKsfw%3D%3D"
-            class="card-img-top img-puffy object-fit-cover w-100 rounded-0" alt="眼球泡芙">
+            class="img-puffy object-fit-cover w-100 rounded-0" alt="眼球泡芙">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">眼球泡芙</h6>
               <RouterLink to="product/-Nsr_ZwbzJ9QXRcpiISn"
@@ -158,7 +158,7 @@
     <img class="object-fit-cover card-img card-vouher" alt="優惠卷"
     src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712137673350.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=j3MymiWcci7MDtrMHTCqkWmB2QPdvZVvLGTT2zZdOCDAO9YSXJuTcE4c8yMMy310Er08EjbdtQXgJintXcL7DFeci7qAN5EKIhBqQhHJN7NtLcqz7%2B%2FKiMXFel76dpn9ZqOINDi2dlKCnSLIXl5qO%2F%2BeyfC%2BsgWxa%2FM7WUTMo%2BWxS%2FXyvCNAPjb6dIr9B8iSLgI8F4gjsukL0FSmTFQBI1hUigNOC82qk5U9PK4G%2FGWrjOpsO7p6kN3LVW%2F6eR9Ifl%2BQFsTq%2B7G94nWXHvngOSZ17qI%2FrLqwzYCJ6FkQKguDCfPpX%2FT%2FWaxT19INWrEGu3sgBofN1d61vDvVhWEXsw%3D%3D">
     <div class="card-img-overlay d-flex flex-column justify-content-center">
-      <h4 class="text-center" style="background-color: #f08080;">初次訂購可享5％優惠</h4>
+      <h4 class="text-center" style="background-color: #E35959;">初次訂購可享5％優惠</h4>
       <button type="button" @click="copyCuponCode('PUFFY123')"
       class="btn btn-outline-light rounded-0"
       >點我領取</button>

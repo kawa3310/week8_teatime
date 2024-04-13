@@ -82,7 +82,7 @@
       <hr>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col col-img my-4" v-for="item in recommend" :key="item.id">
-            <div class="card bg-body border rounded-0">
+            <div class="card border rounded-0">
               <div class="box">
                 <img :src="item.imageUrl" :alt="item.imageUrl"
                 class="img img-fluid card-img-top object-fit-cover rounded-0">
