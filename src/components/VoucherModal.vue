@@ -6,8 +6,6 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 id="VoucherModalLabel" class="modal-title">
-            <!--<span v-if="isNew">新增優惠卷</span>
-            <span v-else>編輯優惠卷</span>-->
             <span>{{ `${isNew ? '新增' : '編輯'}` }}</span>
           </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"
