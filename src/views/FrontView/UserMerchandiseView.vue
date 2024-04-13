@@ -1,9 +1,9 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container my-5">
-    <div class="d-flex justify-content-center">
-      <ul class="list-group list-group-horizontal-sm my-5">
-        <li class="list-change list-group list-group-flush m-2 border"
+    <div class="d-flex justify-content-center mb-5">
+      <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group list-group-flush m-2 border"
         v-for="(item,key) in filter.list" :key="key">
           <a
           class="list-group-item rounded-0"
@@ -12,8 +12,8 @@
         </li>
       </ul>
     </div>
-    <div class="row row-cols-3 row-cols-md-3 g-4 mt-2 justify-content-center">
-      <div class="col-img col"
+    <div class="row row-cols-3 row-cols-md-3 justify-content-center">
+      <div class="col col-img my-4"
       v-for="item in products" :key="item.id">
         <div class="card bg-body border rounded-0">
           <div class="box">
@@ -119,6 +119,6 @@ a {
   background-size: cover;
 }
 .list-group-item.active {
-  background-color: #FFB2B2;
+  background-color: #FC8B8B;
 }
 </style>

@@ -3,9 +3,15 @@
     <div class="container">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="d-flex justify-content-center">
-            <h3 class="my-5" style="color: #927A60">TeaTime的誕生</h3>
+          <div class="position-relative mt-8">
+            <img class="object-fit-cover card-img text-center" alt="teatime圖"
+            style="height: 300px; background-clip: text;"
+            src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712936654019.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=j4ktKCQFxraFSZYdGhUhHg4J1qh0lMFiw1rj4HVac2a12oArg7h4YEX%2BGnJ%2BmNmCFE4pLRzoYxDlEnYnT3Y8LL%2Bq0r9OLKxIBMAydbh27hjUhC7swCDLcmeMGYLOo2Ez4XGhKzISCx1Er%2BM3yQqR%2BQVphLmNCEYM9swkd%2F%2BkFe%2FlsS9BZwAVxjUuYWh8nkEY11Bjyxz4dxUCttG2Fo4dcgksDdXNp78kpM4AGarB5sbj9uJtzDcZb5ROsiDM4Fsyo6dE5ivMqiYk8eQie44Iu5r2rt%2FG5Yvxjkx%2FhroxJmclUAXTgH0ID%2BdcHNY%2F5Ns%2BzkXjB0BIR6dGk2DERnRS9A%3D%3D">
+            <div class="card-img-overlay d-flex flex-column justify-content-center text-center">
+              <h3 style="color: white">TeaTime的誕生</h3>
+            </div>
           </div>
+
           <div class="carousel-item active">
             <div class="row justify-content-center py-7">
               <div class="col-md-8 d-flex">
@@ -47,3 +53,7 @@
     </div>
   </div>
 </template>
+
+<style>
+
+</style>

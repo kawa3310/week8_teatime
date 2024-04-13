@@ -37,9 +37,9 @@
                     <span class="price fs-3">{{ product.price }}</span> 元
                   </p>
                 </div>
-                <div class="d-flex">
+                <div>
                   <span class="fs-7">數量：</span>
-                    <select class="form-select rounded-0" aria-labe="數量" style="width: 80px;"
+                    <select class="form-select" aria-labe="數量"
                     name="number" id="number" v-model.number="qty">
                       <option v-for="index in 10" :key="index" :value="index"
                       e>{{index}}</option>
@@ -53,9 +53,9 @@
       </div>
     </div>
   </div>
-  <section>
-    <div class="img-say-color col-lg border mt-5 mb-2 p-3">
-      <div class="row justify-content-center">
+  <section class="img-say-color">
+    <div class="col-md-11 mt-5 mb-2">
+      <div class="row justify-content-center border p-5">
         <h5 class="text-say text-center">【 師傅有話要說 】</h5>
           <div class="col-md-6 offset-md-3 align-self-center">
             <h4 class="text-back text-center lh-lg">{{ product.content }}</h4>
@@ -68,13 +68,12 @@
       </div>
     </div>
   </section>
-      <div class="row justify-content-center p-8">
+      <div class="row justify-content-center p-7">
         <span class="h4 text-start">螞蟻人還喜歡</span>
         <hr>
-        <div class="row row-cols-1 row-cols-md-2 g-2">
-          <div class="col-12 col-md-3" v-for="item in recommend" :key="item.id">
-            <RouterLink :to="`/product/${item.id}`" class="link">
-              <div class="card h-100 bg-body border rounded-0 ms-2">
+        <div class="row row-cols-3 row-cols-md-3">
+          <div class="col-12 col-md-3 mb-3" v-for="item in recommend" :key="item.id">
+              <div class="card bg-body border rounded-0">
                 <div class="box">
                   <img :src="item.imageUrl" :alt="item.imageUrl"
                   class="img img-fluid card-img-top object-fit-cover rounded-0">
@@ -83,10 +82,13 @@
                     <h6 class="title text-top">
                       {{ item.title }}
                     </h6>
-                    <p class="card-text fs-7">NT${{ item.price }}</p>
+                    <span>NT${{ item.price }}</span>
+                    <RouterLink :to="`/product/${item.id}`" class="link">
+                      <button type="button" class="btn btn-outline-success w-100 mt-1 rounded-0"
+                      >商品詳細</button>
+                    </RouterLink>
                   </div>
               </div>
-            </RouterLink>
           </div>
         </div>
       </div>

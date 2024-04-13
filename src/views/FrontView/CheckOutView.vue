@@ -1,6 +1,6 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
-  <div class="container pb-5" v-if="cart.total !== 0">
+  <div class="container pb-5" v-if="cart.length !== 0">
     <div class="row justify-content-center mb-5">
       <div class="col-9 col-md-8 position-relative mt-6">
         <div class="progress" style="height: 5px;">
@@ -31,11 +31,11 @@
       <div class="col-md-8 bg-white"
       style="min-height: calc(100vh - 56px - 76px);">
         <div class="d-flex justify-content-center">
-          <h2 class="my-4" v-if="cart.total !== 0">購物車</h2>
+          <h2 class="my-4" v-if="cart.final_total !== 0">購物車</h2>
         </div>
         <div class="d-flex flex-column justify-content-center">
-          <div class="shadow-sm mb-5 bg-body rounded border overflow-hidden"
-              v-for="cart in cart.carts" :key="cart.id">
+          <div class="shadow-sm mb-4 bg-body rounded border overflow-hidden"
+              v-for="cart in cart" :key="cart.id">
             <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <img :src="cart.product.imageUrl"
@@ -93,7 +93,7 @@
           </div>
           <div class="card-total d-flex justify-content-end" v-if="useCode">
             <p class="fs-9 fw-bold">-優惠卷折扣
-              {{ $filter.currency(cart.total - cart.final_total) }}
+              {{ $filter.currency(carts.total - carts.final_total) }}
             </p>
           </div>
           <div class="card-total d-flex justify-content-end">
@@ -102,9 +102,10 @@
           </div>
           <div class="d-flex justify-content-between mt-5">
             <div class="bt">
-            <RouterLink :to="`/merchandise`" class="btn btn-outline-secondary rounded-0">
-              <i class="bi bi-caret-left"></i> 繼續選購
-            </RouterLink>
+              <RouterLink :to="`/merchandise`" class="btn btn-outline-secondary rounded-0">
+                <i class="bi bi-caret-left"></i>
+                <span>繼續選購</span>
+              </RouterLink>
             </div>
             <div class="bt mx-2">
               <button type="button" class="btn btn-outline-secondary rounded-0" @click="delItems"
@@ -135,14 +136,13 @@
 <script>
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import { mapActions } from 'pinia';
+import { mapActions, mapState } from 'pinia';
 import cartStore from '@/stores/cartStore';
 
 const { VITE_URL, VITE_PATH } = import.meta.env;
 export default {
   data() {
     return {
-      cart: {},
       voucher: {
         code: 'PUFFY123',
       },
@@ -150,27 +150,11 @@ export default {
       isloading: false,
     };
   },
+  computed: {
+    ...mapState(cartStore, ['cart']),
+  },
   methods: {
     ...mapActions(cartStore, ['getCart']),
-    getCart() {
-      this.isloading = true;
-      axios.get(`${VITE_URL}/api/${VITE_PATH}/cart`)
-        .then((res) => {
-          this.isloading = false;
-          this.cart = res.data.data;
-        })
-        .catch((error) => {
-          this.isloading = false;
-          Swal.fire({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 1500,
-            icon: 'error',
-            title: error.response.data.message,
-          });
-        });
-    },
     delCart(id) {
       this.cart.id = id;
       this.isloading = true;
