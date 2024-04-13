@@ -8,19 +8,24 @@ const { VITE_URL, VITE_PATH } = import.meta.env;
 export default defineStore('cartStore', {
   state: () => ({
     cart: {},
-    carts: {},
+    cartsTotal: {},
     final_total: 0,
     total: 0,
+    isloading: false,
   }),
   actions: {
     getCart() {
+      this.isloading = true;
       axios.get(`${VITE_URL}/api/${VITE_PATH}/cart`)
         .then((res) => {
+          this.isloading = false;
           this.cart = res.data.data.carts;
+          this.cartsTotal = res.data.data;
           this.final_total = res.data.data.final_total;
           this.total = res.data.data.total;
         })
         .catch((error) => {
+          this.isloading = false;
           Swal.fire({
             toast: true,
             position: 'top-end',

@@ -7,8 +7,9 @@
             <i class="bi bi-cart-check"></i>
           </h2>
           <div class="d-flex justify-content-center">
-            <RouterLink :to="`/home`" class="btn btn-outline-secondary rounded-0">
-              <i class="bi bi-caret-left"></i> 回首頁
+            <RouterLink :to="`/home`"
+            class="btn btn-outline-secondary rounded-0 d-flex align-items-center">
+              <i class="bi bi-caret-left d-flex"></i> 回首頁
             </RouterLink>
           </div>
         </div>

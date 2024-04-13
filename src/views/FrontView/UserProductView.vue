@@ -1,6 +1,6 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
-  <div class="container mt-3">
+  <div class="container my-5">
     <div class="row justify-content-end">
       <div class="col-md-11">
         <nav aria-label="breadcrumb">
@@ -38,12 +38,18 @@
                   </p>
                 </div>
                 <div>
-                  <span class="fs-7">數量：</span>
-                    <select class="form-select" aria-labe="數量"
-                    name="number" id="number" v-model.number="qty">
-                      <option v-for="index in 10" :key="index" :value="index"
-                      e>{{index}}</option>
-                    </select>
+                  <div class="row justify-content-center">
+                    <div class="col d-flex align-items-center">
+                      <span class="fs-7">數量：</span>
+                    <div class="col">
+                      <select class="form-select" aria-labe="數量"
+                        name="number" id="number" v-model.number="qty">
+                          <option v-for="index in 10" :key="index" :value="index"
+                          e>{{index}}</option>
+                        </select>
+                    </div>
+                    </div>
+                  </div>
                 </div>
                 <button type="button" class="btn btn-danger rounded-0 w-100 py-2 mt-4"
                   @click="addCart(product.id)">加入購物車</button>
@@ -53,45 +59,49 @@
       </div>
     </div>
   </div>
-  <section class="img-say-color">
-    <div class="col-md-11 mt-5 mb-2">
-      <div class="row justify-content-center border p-5">
-        <h5 class="text-say text-center">【 師傅有話要說 】</h5>
-          <div class="col-md-6 offset-md-3 align-self-center">
-            <h4 class="text-back text-center lh-lg">{{ product.content }}</h4>
-        </div>
-        <div class="col-md-3">
-          <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710159844724.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=DJbPP3CWlMkamBFQ79A7FhY0JlPf2g1maCPSEwOrQsUCojIM%2BSrm%2FqFts3SCB%2BbhoWx8TUu3RJiI9qbtyJnMqLTdxAbarnch5H%2FWzm%2BcWdrfoNEdPlc7ILcgs%2FTQsAS1S3oi1JfeMplBk4zjpQJFQun%2BnvQXPavUnua5KxFI7rLAfh5skkUlv6m9q1wKlHFXg5W5yPO9RhsEbCGR8R0LIvrhGKEgyBlg7eJ6sPaz%2FsHzcEmTJP8wbfUTPfIK3WbHVAxm2BvN%2Fhx7pzkF0fxx73Wh6%2BwJQIBMsPjKzo%2Blo2ejwQktfRsElmJNFIT%2B6Iok22nKAC2xJY0C0u%2F3cTkcZw%3D%3D"
-          class="img-say-img img-fluid object-fit-cover"
-            :alt="product.imageUrl">
-        </div>
-      </div>
-    </div>
-  </section>
-      <div class="row justify-content-center p-7">
-        <span class="h4 text-start">螞蟻人還喜歡</span>
-        <hr>
-        <div class="row row-cols-3 row-cols-md-3">
-          <div class="col-12 col-md-3 mb-3" v-for="item in recommend" :key="item.id">
-              <div class="card bg-body border rounded-0">
-                <div class="box">
-                  <img :src="item.imageUrl" :alt="item.imageUrl"
-                  class="img img-fluid card-img-top object-fit-cover rounded-0">
-                </div>
-                  <div class="p-3">
-                    <h6 class="title text-top">
-                      {{ item.title }}
-                    </h6>
-                    <span>NT${{ item.price }}</span>
-                    <RouterLink :to="`/product/${item.id}`" class="link">
-                      <button type="button" class="btn btn-outline-success w-100 mt-1 rounded-0"
-                      >商品詳細</button>
-                    </RouterLink>
-                  </div>
-              </div>
+  <div class="container-fluid img-say-color">
+    <div class="row">
+      <div class="col mb-2">
+        <h4 class="text-say text-center pt-3">【 師傅有話要說 】</h4>
+        <div class="row justify-content-center p-5">
+            <div class="col-0 col-md-5 offset-md-3 align-self-center">
+              <h4 class="text-back text-center lh-lg">{{ product.content }}</h4>
+          </div>
+          <div class="col-0 col-md-4">
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710159844724.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=DJbPP3CWlMkamBFQ79A7FhY0JlPf2g1maCPSEwOrQsUCojIM%2BSrm%2FqFts3SCB%2BbhoWx8TUu3RJiI9qbtyJnMqLTdxAbarnch5H%2FWzm%2BcWdrfoNEdPlc7ILcgs%2FTQsAS1S3oi1JfeMplBk4zjpQJFQun%2BnvQXPavUnua5KxFI7rLAfh5skkUlv6m9q1wKlHFXg5W5yPO9RhsEbCGR8R0LIvrhGKEgyBlg7eJ6sPaz%2FsHzcEmTJP8wbfUTPfIK3WbHVAxm2BvN%2Fhx7pzkF0fxx73Wh6%2BwJQIBMsPjKzo%2Blo2ejwQktfRsElmJNFIT%2B6Iok22nKAC2xJY0C0u%2F3cTkcZw%3D%3D"
+            class="img-say-img img-fluid object-fit-cover"
+              :alt="product.imageUrl">
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="container my-8">
+    <div class="row justify-content-center">
+      <span class="h4 text-start">螞蟻人還喜歡</span>
+      <hr>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col col-img my-4" v-for="item in recommend" :key="item.id">
+            <div class="card bg-body border rounded-0">
+              <div class="box">
+                <img :src="item.imageUrl" :alt="item.imageUrl"
+                class="img img-fluid card-img-top object-fit-cover rounded-0">
+              </div>
+                <div class="p-3">
+                  <h6 class="card-title">
+                    {{ item.title }}
+                  </h6>
+                  <span>NT${{ item.price }}</span>
+                  <RouterLink :to="`/product/${item.id}`" class="link">
+                    <button type="button" class="btn btn-outline-success w-100 mt-1 rounded-0"
+                    >商品詳細</button>
+                  </RouterLink>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
 </template>
 
 <script>
@@ -176,11 +186,10 @@ span {
 .price {
   color: #FB7070;
 }
-.box {
-  height: 160px;
-}
 .card-img-top {
+  height: 160px;
   max-height: 100%;
+  background-size: cover;
 }
 .img-say-color {
   background-color: #DDDCDC;

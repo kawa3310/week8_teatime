@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="row justify-content-center flex-md-row">
-      <div class="col-md-7">
+      <div class="col-12 col-md-10">
         <h2 class="order-color text-center my-5">訂單已成立</h2>
         <div class="border p-4 shadow-sm p-3 mb-5 bg-body rounded">
           <h4 class="mb-4 fw-bold text-center my-5">您的訂單編號</h4>

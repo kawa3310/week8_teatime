@@ -1,18 +1,18 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container my-5">
-    <div class="d-flex justify-content-center mb-5">
-      <ul class="list-group list-group-horizontal-sm">
+    <div class="category-list d-md-flex justify-content-md-center">
+      <ul class="list-group list-group-horizontal text-nowrap">
         <li class="list-group list-group-flush m-2 border"
         v-for="(item,key) in filter.list" :key="key">
-          <a
-          class="list-group-item rounded-0"
-          :class="activeClass == key ? 'active' : ''"
-          @click.prevent="changeCategory(item,key)">{{ item }}</a>
+          <button type="button"
+            class="list-group-item rounded-0"
+            :class="activeClass == key ? 'active' : ''"
+            @click.prevent="changeCategory(item,key)">{{ item }}</button>
         </li>
       </ul>
     </div>
-    <div class="row row-cols-3 row-cols-md-3 justify-content-center">
+    <div class="row row-cols-1 justify-content-center">
       <div class="col col-img my-4"
       v-for="item in products" :key="item.id">
         <div class="card bg-body border rounded-0">
@@ -119,6 +119,22 @@ a {
   background-size: cover;
 }
 .list-group-item.active {
-  background-color: #FC8B8B;
+  background-color: #f85e5e;
+}
+
+.category-list {
+  overflow-x: auto;
+  &::-webkit-scrollbar{
+      height: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #ebcece;
+      border-radius: 10px;
+      margin: 10px 130px;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+      background-color: #d84f4f;
+    }
 }
 </style>

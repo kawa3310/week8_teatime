@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-md-8 bg-white"
+      <div class="col col-md-12 col-lg-9 bg-white"
       style="min-height: calc(100vh - 56px - 76px);">
         <div class="d-flex justify-content-center">
           <h2 class="my-4" v-if="cart.final_total !== 0">購物車</h2>
@@ -71,7 +71,7 @@
                       </div>
                     </div>
                     <div class="col-md-4 mt-3">
-                      <div class="fs-6">總計 NT${{ cart.total }}</div>
+                      <div class="fs-6">總計 NT${{ cart.final_total }}</div>
                     </div>
                   </div>
                 </div>
@@ -93,18 +93,19 @@
           </div>
           <div class="card-total d-flex justify-content-end" v-if="useCode">
             <p class="fs-9 fw-bold">-優惠卷折扣
-              {{ $filter.currency(carts.total - carts.final_total) }}
+              {{ $filter.currency(cartsTotal.total - cartsTotal.final_total) }}
             </p>
           </div>
           <div class="card-total d-flex justify-content-end">
             <p class="mb-0 h6 fw-bold">總金額：</p>
-            <p class="mb-0 h6 fw-bold">NT${{ $filter.currency(cart.final_total) }}</p>
+            <p class="mb-0 h6 fw-bold">NT${{ $filter.currency(cartsTotal.final_total) }}</p>
           </div>
           <div class="d-flex justify-content-between mt-5">
             <div class="bt">
-              <RouterLink :to="`/merchandise`" class="btn btn-outline-secondary rounded-0">
-                <i class="bi bi-caret-left"></i>
-                <span>繼續選購</span>
+              <RouterLink :to="`/merchandise`"
+                class="btn btn-outline-secondary rounded-0 d-flex align-items-center">
+                  <i class="bi bi-caret-left d-flex"></i>
+                  <span>繼續選購</span>
               </RouterLink>
             </div>
             <div class="bt mx-2">
@@ -112,8 +113,12 @@
               >清空</button>
             </div>
             <div class="order">
-              <RouterLink :to="`/orderOut`" class="order btn btn-danger rounded-0"
-              >結帳帶回家 <i class="bi bi-caret-right"></i></RouterLink>
+              <RouterLink :to="`/orderOut`"
+                class="order btn btn-danger rounded-0 d-flex align-items-center"
+              >
+                結帳帶回家
+                <i class="bi bi-caret-right d-flex"></i>
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -147,11 +152,10 @@ export default {
         code: 'PUFFY123',
       },
       useCode: false,
-      isloading: false,
     };
   },
   computed: {
-    ...mapState(cartStore, ['cart']),
+    ...mapState(cartStore, ['cart', 'cartsTotal', 'isloading']),
   },
   methods: {
     ...mapActions(cartStore, ['getCart']),
