@@ -6,11 +6,13 @@
         to="/">TeaTime</RouterLink>
       </h4>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      data-bs-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse flex justify-content-end" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse flex justify-content-end"
+      id="navbarToggleExternalContent">
         <div class="navbar-body my-2">
           <ul class="navbar-nav text-center text-nowrap">
             <li class="nav-item me-3">
