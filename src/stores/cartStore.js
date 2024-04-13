@@ -31,25 +31,6 @@ export default defineStore('cartStore', {
           });
         });
     },
-    getCarts() {
-      this.isloading = true;
-      axios.get(`${VITE_URL}/api/${VITE_PATH}/cart`)
-        .then((res) => {
-          this.isloading = false;
-          this.carts = res.data.data;
-        })
-        .catch((error) => {
-          this.isloading = false;
-          Swal.fire({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 1500,
-            icon: 'error',
-            title: error.response.data.message,
-          });
-        });
-    },
     getProduct() {
       const { id } = this.$route.params;
       axios.get(`${VITE_URL}/api/${VITE_PATH}/product/${id}`)

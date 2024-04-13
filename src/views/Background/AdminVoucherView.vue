@@ -63,12 +63,7 @@ export default {
   data() {
     return {
       voucher: {},
-      tempVoucher: {
-        title: '',
-        is_enabled: false,
-        percent: 100,
-        code: '',
-      },
+      tempVoucher: this.resetVoucher(), // 初始化資料
       isNew: false,
       pages: {},
       isloading: false,
@@ -94,16 +89,23 @@ export default {
           });
         });
     },
+    resetVoucher() {
+      return {
+        title: '',
+        is_enabled: 0,
+        percent: 100,
+        code: '',
+        due_date: new Date().getTime() / 1000,
+      };
+    },
     openModel(isNew, item) {
       if (isNew === 'new') {
         this.isNew = true;
-        this.tempVoucher = {
-          due_date: new Date().getTime() / 1000,
-        };
+        this.tempVoucher = this.resetVoucher(); // 重置資料
         this.$refs.voucher.modelOpen();
       } else if (isNew === 'edit') {
         this.isNew = false;
-        this.tempVoucher = { ...item };
+        this.tempVoucher = { ...item }; // 寫入資料
         this.$refs.voucher.modelOpen();
       } else if (isNew === 'dele') {
         this.tempVoucher = { ...item };

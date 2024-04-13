@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg- px-sm-1 px-md-2">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-sm-1 px-md-2">
     <div class="container-fluid">
       <h4 class="m-0">
         <RouterLink class="router-link nav-link active navbar-brand"

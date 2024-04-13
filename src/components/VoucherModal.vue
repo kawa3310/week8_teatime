@@ -6,8 +6,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 id="VoucherModalLabel" class="modal-title">
-            <span v-if="isNew">新增優惠卷</span>
-            <span v-else>編輯優惠卷</span>
+            <!--<span v-if="isNew">新增優惠卷</span>
+            <span v-else>編輯優惠卷</span>-->
+            <span>{{ `${isNew ? '新增' : '編輯'}` }}</span>
           </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"
           aria-label="Close"></button>
@@ -74,6 +75,7 @@ export default {
     return {
       voucher: null,
       emitVoucher: {},
+
       due_date: '',
     };
   },
@@ -90,7 +92,8 @@ export default {
     this.voucher = new Modal(this.$refs.VoucherModal);
   },
   watch: {
-    tempVoucher() {
+    tempVoucher(val) {
+      console.log('val: ', val);
       this.emitVoucher = this.tempVoucher;
       const dateTime = new Date(this.emitVoucher.due_date * 1000).toISOString().split('T');
       [this.due_date] = dateTime;
