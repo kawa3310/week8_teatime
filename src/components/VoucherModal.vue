@@ -90,8 +90,7 @@ export default {
     this.voucher = new Modal(this.$refs.VoucherModal);
   },
   watch: {
-    tempVoucher(val) {
-      console.log('val: ', val);
+    tempVoucher() {
       this.emitVoucher = this.tempVoucher;
       const dateTime = new Date(this.emitVoucher.due_date * 1000).toISOString().split('T');
       [this.due_date] = dateTime;
