@@ -5,8 +5,6 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
-import { BootstrapIconsPlugin } from 'bootstrap-icons-vue';
-
 import {
   Field, Form, ErrorMessage, defineRule, configure,
 } from 'vee-validate';
@@ -50,7 +48,6 @@ app.config.globalProperties.$filter = {
 
 app.use(createPinia());
 app.use(router);
-app.use(BootstrapIconsPlugin);
 
 app.component('VueLoading', Loading);
 app.component('VField', Field);
