@@ -53,10 +53,10 @@
       </table>
     </div>
   </div>
-  <PaginationModal :pages="pages" @emit-Pages="getOrders"></PaginationModal>
+  <PaginationModal :pages="pages" @emit-Pages="getOrders" />
   <OrderModal :temp-Order="tempOrder" ref="orderModal"
-  @add-Order-States="addOrderStates"></OrderModal>
-  <DelProductModal :item="tempOrder" @del-item="delOrder" ref="deModal"></DelProductModal>
+  @add-Order-States="addOrderStates" />
+  <DelProductModal :item="tempOrder" @del-item="delOrder" ref="deModal" />
 </template>
 
 <script>

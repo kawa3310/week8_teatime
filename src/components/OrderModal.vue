@@ -96,8 +96,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </template>
+  </div>
+</template>
 
 <script>
 import { Modal } from 'bootstrap';

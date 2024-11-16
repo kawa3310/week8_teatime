@@ -54,16 +54,14 @@
       </tbody>
     </table>
     <!-- 分頁 -->
-    <PaginationModal :pages="pages" @emit-Pages="getData"></PaginationModal>
+    <PaginationModal :pages="pages" @emit-Pages="getData" />
 
     <!-- 新增編輯分頁 -->
     <ProductModal :temp-products="tempProducts" :add-product="addProduct" :is-new="isNew"
-    :add-img="addImg" ref="pduct">
-    </ProductModal>
+    :add-img="addImg" ref="pduct" />
 
     <!-- 刪除分頁 -->
-    <DelProductModal :temp-products="tempProducts" @del-item="delProduct" ref="deModal">
-    </DelProductModal>
+    <DelProductModal :temp-products="tempProducts" @del-item="delProduct" ref="deModal" />
   </div>
 </template>
 

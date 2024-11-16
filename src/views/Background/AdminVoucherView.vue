@@ -43,13 +43,13 @@
       </table>
     </div>
   </div>
-  <PaginationModal :pages="pages" @emit-Pages="getVoucherData"></PaginationModal>
+  <PaginationModal :pages="pages" @emit-Pages="getVoucherData" />
 
   <VoucherModal :is-New="isNew" :temp-Voucher="tempVoucher"
-  @edit-Voucher="editVoucher" ref="voucher"></VoucherModal>
+  @edit-Voucher="editVoucher" ref="voucher" />
 
   <DelProductModal @del-item="delProduct" :temp-Voucher="tempVoucher"
-  ref="deModal"></DelProductModal>
+  ref="deModal" />
 </template>
 <script>
 import axios from 'axios';

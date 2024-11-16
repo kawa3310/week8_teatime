@@ -129,6 +129,7 @@ export default {
         .then((res) => {
           this.isloading = false;
           this.product = res.data.product;
+          console.log(this.product);
           this.recommendProduct();
         })
         .catch((error) => {
