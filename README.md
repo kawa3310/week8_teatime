@@ -1,11 +1,12 @@
 ## TeaTime
 
-南南道路駕訓是能一款提供北中南道路駕訓服務的預約平台，課程使用者可以透過瀏覽課程方案、師資來選擇最適合自己的課程方案。透過這個平台希望讓所有剛拿到駕照的新手們得到專業的知識技巧後不必再畏懼成為馬路三寶。
+TeaTime是一款線上手作甜品商店，提供和實體店面一樣的服務，使用者可以在網頁輕鬆瀏覽商品，並加入購物車、結帳、付款後取得訂單編號。
+也提供後台使用者上架、編輯、管理商品，管理訂單功能。
 
 ## 瀏覽專案
 [專案DEMO](https://kawa3310.github.io/week8_teatime/#/)
 
-![image](https://kawa3310.github.io/week8_teatime/#/)
+![image](https://github.com/kawa3310/week8_teatime/blob/main/public/Teatime.jpg)
 
 ## Node.js 版本
 Node.js 版本建議為：18.17.1 以上
