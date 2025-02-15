@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light px-sm-1 px-md-2">
     <div class="container-fluid">
       <h4 class="m-0">
-        <RouterLink class="router-link nav-link active navbar-brand"
+        <RouterLink class="router-link nav-link active"
         to="/">TeaTime</RouterLink>
       </h4>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -14,7 +14,7 @@
       <div class="collapse navbar-collapse flex justify-content-end"
       id="navbarToggleExternalContent">
         <div class="navbar-body my-2">
-          <ul class="navbar-nav text-center text-nowrap">
+          <ul class="navbar-nav text-center text-nowrap fs-5">
             <li class="nav-item me-3">
               <RouterLink class="nav-link" to="/about">關於本店
               </RouterLink>
@@ -24,12 +24,13 @@
             </li>
             <li class="nav-item-icon me-3 position-relative">
               <RouterLink class="nav-link py-1" :to="`/cart`">
-                <i class="bi bi-cart-fill">
-                  <span class="nav-icon badge rounded-pill fw-normal translate-middle bg-danger">
+                <p class="bi bi-cart-fill m-0">
+                  <span class="badge rounded-pill fw-400 translate-middle bg-danger
+                  ">
                     {{ this.cart.length }}
                     <span class="visually-hidden">unread messages</span>
                   </span>
-                </i>
+                </p>
               </RouterLink>
             </li>
           </ul>
@@ -59,12 +60,12 @@ export default {
 .nav-link {
   font-weight: 500;
   position: relative;
-  color: #A98B73;
+  color: #4e4e4e;
   &:hover {
-    color: #9A6852  !important;
+    color: #e1cda1;
   }
   &.router-link-exact-active {
-    color: #876D5A  !important;
+    color: #e1cda1;
   }
 }
 .nav-icon {
