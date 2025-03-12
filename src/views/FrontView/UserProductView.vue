@@ -82,7 +82,7 @@
       <hr>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col col-img my-4" v-for="item in recommend" :key="item.id">
-            <div class="card border rounded-0">
+            <div class="card border rounded">
               <div class="box">
                 <img :src="item.imageUrl" :alt="item.imageUrl"
                 class="img img-fluid card-img-top object-fit-cover rounded-0">
@@ -93,7 +93,7 @@
                   </h6>
                   <span>NT${{ item.price }}</span>
                   <RouterLink :to="`/product/${item.id}`" class="link">
-                    <button type="button" class="btn btn-outline-success w-100 mt-1 rounded-0"
+                    <button type="button" class="btn btn-outline-success w-100 mt-2 rounded-0"
                     >商品詳細</button>
                   </RouterLink>
                 </div>
