@@ -3,10 +3,10 @@
   <div class="container my-5">
     <div class="category-list d-md-flex justify-content-md-center">
       <ul class="list-group list-group-horizontal text-nowrap">
-        <li class="list-group list-group-flush m-2 border"
+        <li class="list-group list-group-flush m-2 border rounded"
         v-for="(item,key) in filter.list" :key="key">
           <button type="button"
-            class="list-group-item rounded-0"
+            class="list-group-item rounded"
             :class="activeClass == key ? 'active' : ''"
             @click.prevent="changeCategory(item,key)">{{ item }}</button>
         </li>
@@ -15,11 +15,11 @@
     <div class="row row-cols-1 justify-content-center">
       <div class="col col-img my-4"
       v-for="item in products" :key="item.id">
-        <div class="card bg-body border rounded-0">
+        <div class="card bg-body border rounded">
           <div class="box">
             <RouterLink :to="`/product/${item.id}`" class="link">
               <img :src="item.imageUrl" :alt="item.imageUrl"
-              class="img img-fluid card-img-top object-fit-cover rounded-0">
+              class="img img-fluid card-img-top object-fit-cover rounded-top">
               <div class="info flex-row justify-content-center align-items-center">
                 <p><i class="bi bi-search"></i>商品詳細</p>
               </div>
@@ -32,7 +32,7 @@
               </h6>
               <span>NT${{ item.price }}</span>
               </RouterLink>
-              <button type="button" class="btn btn-outline-danger w-100 mt-1 rounded-0"
+              <button type="button" class="btn btn-outline-danger w-100 mt-2 rounded-0"
               @click="addCart(item.id)">加入購物車</button>
             </div>
         </div>
