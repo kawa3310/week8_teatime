@@ -72,7 +72,6 @@ export default {
             this.products = filterPro;
           } else {
             this.products = res.data.products;
-            console.log(this.products);
           }
         })
         .catch((error) => {
