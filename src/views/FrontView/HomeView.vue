@@ -101,7 +101,7 @@
         <div class="col-9 col-md-6 col-lg-3">
           <div class="card rounded m-2">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1712058328314.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=mNfXnmUruF0Xsj5lW%2Bsfa8H2mPtK%2FiD%2BJ0BuNg1OyQx4WxLH3E%2FhlOwxQVOIjoKRqjxpblqVgxnikxflUcJKcv8T11pazqawcq7VZgFVoOdFxP06De2yuzEKRp7ve8MxVETJih4Vck9LetcJuxXCkfSKNX9VjCCl%2B0bwGP5zPC1PecsOrug7DwcqbGbKj9E3TMexzcBKqTii17bx8nQN3StgrpOVKSBlloxqOvzTUrZSokE%2Ffyyx8ZL9vthaf0iDULUUOIIVVlAmJwLgSVC2Hkq82%2FwlXIihbr2vV22CHQ2t5GBkU4R1msboAFQpzx9vYgMSupTM0Zk%2F%2F6L4NshuWg%3D%3D"
-            class="img-puffy object-fit-cover w-100 rounded" alt="熊貓泡芙">
+            class="img-puffy object-fit-cover w-100 img-radius" alt="熊貓泡芙">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">熊貓泡芙</h6>
               <RouterLink to="product/-Nryee0S1dRc6WcPQ8bM"
@@ -114,7 +114,7 @@
         <div class="col-9 col-md-6 col-lg-3">
           <div class="card rounded m-2">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710238556301.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=CTRTcsLqHPiMeAaEgrwKjSrOJzB2dy%2B8Y1s3EEHv2Vz%2BXDL23HphpmqQfG3RmZPr5PzK1p9QAMU8ULBGwXOxcVlkFNw8zSt7vKlxDttTo71TzV5L8yzK%2B%2B8W62ekWqffAEpNWig4b9p9Qm7VmqNzJy9ZuD5ulhfrkNy6NQO51VRTUhVT15fMid1M5yL%2BQtsw3TL5ejCgxDyUcHMgFyNavSHeFiIpABtWMBFsR0DcBIUtEW16htMBeVYgs5%2FtN0gXxqxWFAN1HF9b%2BN%2F8EeKyu2VCo2eojXFmGxNMggZfhXuZjhIHwRN05n%2F%2FE3Bmfbhy3M7tShoneN%2BH6gLnam8t3g%3D%3D"
-            class="img-puffy object-fit-cover w-100 rounded" alt="熊狗泡芙">
+            class="img-puffy object-fit-cover w-100 img-radius" alt="熊狗泡芙">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">熊狗泡芙</h6>
               <RouterLink to="product/-Nsm998F82atnsPhIMrK"
@@ -127,7 +127,7 @@
         <div class="col-9 col-md-6 col-lg-3">
           <div class="card rounded m-2">
             <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1710329367680.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=hp70elX%2FK979BpuWaTCQBl30MGlHJ85Qev9OI6FD4y4CG4o0WmIx4v7fHPKSb%2B5Y7wGIpPOIzNHFnI9bbWqYUtpxpjjmdI1hmhSr0uYwC%2FsgstGKaggFuvZcL%2BxbuxzuwC7WKN9y66FqTm%2BQmp%2Bip3Jdl1cwuTuDRpL4ecORMI6Ety%2BxPohcYeSsnxxxx9EEIhK62OIEIgngJwB35VfYVTWMkSGotI1ZQUgrCRuqdzC8LmBdpvHMNjUwy8fV%2BQhd3pJGEAtKzCjNjXJSbVcMU%2Bxz2np9WG6hGbPTnco0y23jroD0whK3gu2OwEwLAB8EvNiq2yHrKZIWSHzwFtKsfw%3D%3D"
-            class="img-puffy object-fit-cover w-100 rounded" alt="眼球泡芙">
+            class="img-puffy object-fit-cover w-100 img-radius" alt="眼球泡芙">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">眼球泡芙</h6>
               <RouterLink to="product/-Nsr_ZwbzJ9QXRcpiISn"
@@ -218,5 +218,8 @@ export default {
 .link {
   text-decoration: none;
   color: #DA270D;
+}
+.img-radius {
+  border-radius: 5px 5px 0 0;
 }
 </style>
