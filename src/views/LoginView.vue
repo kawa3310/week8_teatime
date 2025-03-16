@@ -80,7 +80,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/admin-login/23206877_m.jpg') no-repeat center center;
+    background: url('https://github.com/kawa3310/week8_teatime/blob/main/public/admin-login/23206877_m.jpg?raw=true') no-repeat center center;
     background-size: cover;
     filter: blur(1px);
     z-index: -1;
