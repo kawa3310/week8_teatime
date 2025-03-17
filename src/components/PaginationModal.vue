@@ -1,8 +1,8 @@
 <template>
   <nav aria-label="Page navigation example">
-    <ul class="pagination pagination-sm justify-content-center">
+    <ul class="pagination justify-content-center">
       <li class="page-item" :class="{ disabled: !pages.has_pre }">
-        <a class="page-link rounded-0" aria-label="Previous"
+        <a class="page-link" v-if="pages.has_pre" aria-label="Previous"
         @click.prevent="updatePage(pages.current_page - 1)">
           <span aria-hidden="true">&laquo;</span>
         </a>
@@ -11,11 +11,11 @@
       <li class="page-item" :class="{
         active: page === pages.current_page
       }" v-for="page in pages.total_pages" :key="page + 123">
-        <a class="page-link rounded-0" @click.prevent="updatePage(page)">{{ page }}</a>
+        <a class="page-link" @click.prevent="updatePage(page)">{{ page }}</a>
       </li>
 
       <li class="page-item" :class="{ disabled: !pages.has_next }">
-        <a class="page-link rounded-0"
+        <a class="page-link" v-if="!pages.has_pre"
         aria-label="Next" @click.prevent="updatePage(pages.current_page + 1)">
           <span aria-hidden="true">&raquo;</span>
         </a>
@@ -35,3 +35,20 @@ export default {
   },
 };
 </script>
+
+<style>
+  .page-link {
+    border: 0px;
+    color: rgb(151, 149, 149);
+    &:hover, &:focus {
+      color: black;
+      background-color: #fff;
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: #454444;
+    border-color: #454444;
+    color: white;
+  }
+</style>
