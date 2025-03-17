@@ -7,7 +7,7 @@
       </a>
     </div>
     <table class="table">
-      <caption class="fs-4 my-4">管理產品</caption>
+      <caption class="fs-4 my-4">管理優惠卷</caption>
       <thead>
         <tr>
           <th width="120">名稱</th>
