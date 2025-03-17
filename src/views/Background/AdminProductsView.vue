@@ -3,7 +3,7 @@
   <div class="container px-6">
     <div class="text-end">
       <a href="#">
-        <i class="btn bi bi-plus-square plus-add-btn" @click="openModel('new')"></i>
+        <i class="btn bi bi-plus-square plus-add-btn" @click.prevent="openModel('new')"></i>
       </a>
     </div>
     <table class="table">

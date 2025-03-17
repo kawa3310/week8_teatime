@@ -3,7 +3,7 @@
   <div class="container px-6">
     <div class="text-end">
       <a href="#">
-        <i class="btn bi bi-plus-square plus-add-btn" @click="openModel('new')"></i>
+        <i class="btn bi bi-plus-square plus-add-btn" @click.prevent="openModel('new')"></i>
       </a>
     </div>
     <table class="table">
@@ -62,7 +62,7 @@ export default {
   data() {
     return {
       voucher: {},
-      tempVoucher: this.resetVoucher(), // 初始化資料
+      tempVoucher: this.resetVoucher(),
       isNew: false,
       pages: {},
       isloading: false,
@@ -100,11 +100,11 @@ export default {
     openModel(isNew, item) {
       if (isNew === 'new') {
         this.isNew = true;
-        this.tempVoucher = this.resetVoucher(); // 重置資料
+        this.tempVoucher = this.resetVoucher();
         this.$refs.voucher.modelOpen();
       } else if (isNew === 'edit') {
         this.isNew = false;
-        this.tempVoucher = { ...item }; // 寫入資料
+        this.tempVoucher = { ...item };
         this.$refs.voucher.modelOpen();
       } else if (isNew === 'dele') {
         this.tempVoucher = { ...item };
