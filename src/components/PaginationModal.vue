@@ -51,5 +51,6 @@ export default {
     background-color: #454444;
     border-color: #454444;
     color: white;
+    border-radius: 2px;
   }
 </style>
