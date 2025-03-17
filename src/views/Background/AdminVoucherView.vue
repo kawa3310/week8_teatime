@@ -1,47 +1,46 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
-  <div class="container">
+  <div class="container px-6">
     <div class="text-end mt-4">
-      <button type="button" class="btn btn-primary" @click="openModel('new')">
-        建立優惠卷
-      </button>
+      <a href="#">
+        <i class="btn bi bi-plus-square plus-add-btn" @click="openModel('new')"></i>
+      </a>
     </div>
-    <div class="text-end mt-4">
-      <table class="table mt-4">
-        <thead>
-          <tr>
-            <th width="120">名稱</th>
-            <th width="120">折扣百分比</th>
-            <th width="120">到期日</th>
-            <th width="120">是否啟用</th>
-            <th width="120">編輯</th>
+    <table class="table">
+      <caption class="fs-4 my-4">管理產品</caption>
+      <thead>
+        <tr>
+          <th width="120">名稱</th>
+          <th width="120">折扣百分比</th>
+          <th width="120">到期日</th>
+          <th width="120">是否啟用</th>
+          <th width="120">編輯</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr v-for="item in voucher" :key="item.id">
+            <td>{{ item.title }}</td>
+            <td>{{ item.percent }}%</td>
+            <td>{{ $filter.date(item.due_date) }}</td>
+            <td>
+                <span class="text-success" v-if="item.is_enabled === 1">啟用</span>
+                <span v-else>未啟用</span>
+            </td>
+            <td>
+              <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary btn-sm"
+              @click="openModel('edit', item)">
+                編輯
+              </button>
+              <button type="button" class="btn btn-outline-danger btn-sm"
+              @click="openModel('dele', item)">
+                刪除
+              </button>
+              </div>
+            </td>
           </tr>
-        </thead>
-        <tbody>
-            <tr v-for="item in voucher" :key="item.id">
-              <td>{{ item.title }}</td>
-              <td>{{ item.percent }}%</td>
-              <td>{{ $filter.date(item.due_date) }}</td>
-              <td>
-                  <span class="text-success" v-if="item.is_enabled === 1">啟用</span>
-                  <span v-else>未啟用</span>
-              </td>
-              <td>
-                <div class="btn-group">
-                <button type="button" class="btn btn-outline-primary btn-sm"
-                @click="openModel('edit', item)">
-                  編輯
-                </button>
-                <button type="button" class="btn btn-outline-danger btn-sm"
-                @click="openModel('dele', item)">
-                  刪除
-                </button>
-                </div>
-              </td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
+      </tbody>
+    </table>
   </div>
   <PaginationModal :pages="pages" @emit-Pages="getVoucherData" />
 
