@@ -13,8 +13,8 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-md-16">
-                <h3>訂單資料</h3>
+              <div class="col-md">
+                <h3 class="py-3">訂單資料</h3>
                 <table class="table">
                   <tbody v-if="emitOrder.user">
                     <tr>
@@ -43,7 +43,7 @@
                     </tr>
                     <tr>
                       <th>備注</th>
-                      <td>{{ emitOrder.message }}</td>
+                      <td>{{ emitOrder.message || '無' }}</td>
                     </tr>
                     <tr>
                       <th>付款狀態</th>
@@ -58,16 +58,17 @@
                     </tr>
                   </tbody>
                 </table>
-                <h3>選購商品</h3>
+                <h3 class="py-3">選購商品</h3>
                 <table class="table">
                   <thead>
-                    <tr></tr>
+                    <th>品名</th>
+                    <th>數量</th>
+                    <th>價格</th>
                   </thead>
                   <tbody>
                     <tr v-for="order in emitOrder.products" :key="order.id">
-                      <th>{{  order.product.title }}</th>
+                      <td>{{  order.product.title }}</td>
                       <td>{{ order.qty }} / {{ order.product.unit }}</td>
-                      <td>{{ order.product.final_total }}</td>
                       <td>{{ $filter.currency(order.final_total) }}</td>
                     </tr>
                   </tbody>
