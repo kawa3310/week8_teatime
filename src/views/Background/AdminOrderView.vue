@@ -37,16 +37,18 @@
                   </label>
                 </div>
               </td>
-              <div class="btn-group">
-                <button type="button" class="btn btn-outline-primary btn-sm"
-                @click="openModel('look', item)">
-                  查看
-                </button>
-                <button type="button" class="btn btn-outline-danger btn-sm"
-                @click="openModel('dele', item)">
-                  刪除
-                </button>
-              </div>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-outline-primary btn-sm"
+                  @click="openModel('look', item)">
+                    查看
+                  </button>
+                  <button type="button" class="btn btn-outline-danger btn-sm"
+                  @click="openModel('dele', item)">
+                    刪除
+                  </button>
+                </div>
+              </td>
             </tr>
           </template>
         </tbody>
