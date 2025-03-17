@@ -1,16 +1,17 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container px-6">
-    <div class="text-end mt-4">
-      <table class="table mt-4">
+    <div>
+      <table class="table">
+        <caption class="fs-4 my-4">管理訂單</caption>
         <thead>
           <tr>
-            <th width="120">購買日期</th>
-            <th width="120">Email</th>
-            <th width="120">品項</th>
-            <th width="120">應付金額</th>
-            <th width="120">付款狀態</th>
-            <th width="120">編輯</th>
+            <th>購買日期</th>
+            <th>Email</th>
+            <th>品項</th>
+            <th>應付金額</th>
+            <th>付款狀態</th>
+            <th>編輯</th>
           </tr>
         </thead>
         <tbody>
@@ -37,16 +38,18 @@
                   </label>
                 </div>
               </td>
-              <div class="btn-group">
-                <button type="button" class="btn btn-outline-primary btn-sm"
-                @click="openModel('look', item)">
-                  查看
-                </button>
-                <button type="button" class="btn btn-outline-danger btn-sm"
-                @click="openModel('dele', item)">
-                  刪除
-                </button>
-              </div>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-outline-primary btn-sm"
+                  @click="openModel('look', item)">
+                    查看
+                  </button>
+                  <button type="button" class="btn btn-outline-danger btn-sm"
+                  @click="openModel('dele', item)">
+                    刪除
+                  </button>
+                </div>
+              </td>
             </tr>
           </template>
         </tbody>
