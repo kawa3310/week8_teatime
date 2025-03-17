@@ -2,28 +2,28 @@
   <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container px-6">
     <div class="text-end mt-4">
-      <button type="button"
-      class="btn btn-outline-secondary" @click="openModel('new')">
-        建立新的產品
-      </button>
+      <a href="#">
+        <i class="btn bi bi-plus-square plus-add-btn" @click="openModel('new')"></i>
+      </a>
     </div>
-    <table class="table mt-4">
+    <table class="table">
+      <caption class="fs-4 my-4">管理產品</caption>
       <thead>
         <tr>
-          <th width="120">
+          <th>
             分類
           </th>
           <th>產品名稱</th>
-          <th width="120">
+          <th>
             原價
           </th>
-          <th width="120">
+          <th>
             售價
           </th>
-          <th width="100">
+          <th>
             是否啟用
           </th>
-          <th width="120" class="text-center">
+          <th class="text-center">
             編輯
           </th>
         </tr>
@@ -202,3 +202,18 @@ export default {
   },
 };
 </script>
+
+<style>
+  .plus-add-btn {
+    font-size: 30px;
+    color: #5e4d3f;
+  }
+  td, th, table {
+    border: 1px solid #A98B73;
+    text-align: center;
+    vertical-align: middle;
+  }
+  caption {
+    caption-side: top;
+  }
+</style>
