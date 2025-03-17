@@ -1,22 +1,21 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container px-6">
-    <div>
-      <table class="table">
-        <caption class="fs-4 my-4">管理訂單</caption>
+    <div class="text-end mt-4">
+      <table class="table mt-4">
         <thead>
           <tr>
-            <th>購買日期</th>
-            <th>Email</th>
-            <th>品項</th>
-            <th>應付金額</th>
-            <th>付款狀態</th>
-            <th>編輯</th>
+            <th width="120">購買日期</th>
+            <th width="120">Email</th>
+            <th width="120">品項</th>
+            <th width="120">應付金額</th>
+            <th width="120">付款狀態</th>
+            <th width="120">編輯</th>
           </tr>
         </thead>
         <tbody>
           <template v-for="item in orderData" :key="item.id">
-            <tr v-if="orderData.length" :class="{ 'text-secondary': !item.is_paid }">
+            <tr v-if="item && item.id" :class="{ 'text-secondary': !item.is_paid }">
               <td>{{ $filter.date(item.create_at) }}</td>
               <td>
                 <span v-text="item.user.email" v-if="item.user"></span>
@@ -38,18 +37,16 @@
                   </label>
                 </div>
               </td>
-              <td>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-outline-primary btn-sm"
-                  @click="openModel('look', item)">
-                    查看
-                  </button>
-                  <button type="button" class="btn btn-outline-danger btn-sm"
-                  @click="openModel('dele', item)">
-                    刪除
-                  </button>
-                </div>
-              </td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-outline-primary btn-sm"
+                @click="openModel('look', item)">
+                  查看
+                </button>
+                <button type="button" class="btn btn-outline-danger btn-sm"
+                @click="openModel('dele', item)">
+                  刪除
+                </button>
+              </div>
             </tr>
           </template>
         </tbody>
