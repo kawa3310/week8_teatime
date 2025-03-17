@@ -1,7 +1,7 @@
 <template>
   <VueLoading :active="isloading" :z-index="1060"/>
   <div class="container px-6">
-    <div class="text-end mt-4">
+    <div class="text-end">
       <a href="#">
         <i class="btn bi bi-plus-square plus-add-btn" @click="openModel('new')"></i>
       </a>
