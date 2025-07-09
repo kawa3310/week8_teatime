@@ -68,7 +68,7 @@
               <h4 class="text-back text-center lh-lg">{{ product.content }}</h4>
           </div>
           <div class="col-0 col-md-4">
-            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1742214819181.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742428800&Signature=fFnWMZdn2gfL3DQYfsMybEhRLWpONETbcjTMgK%2FW27fG%2BkImR6psMHMvnoJ3gU9sMYzGkomD4qhihncLoUgHsuXNqIKYdK%2BLiu9Jy78F1As2xoiCr8s3K8OFC%2FpR20uskf8HRaN7i%2FyfzLmyXtO1Eec5qZHPkYxLPxE44D4o02lbCMEl3PUf6cDBfVsLzm31WWm7UbrSla6LO7lfkljfv8p5x5im9NmktHVwRaEDF1UlcLtAkHwM41wJDJEGFCMSZtQqHAqjLdzLsX0OyW1mP9R8pKnarCvcxBN9bBqe226uA5xKD6%2FMf3DfTnBkv%2Bd1WBu3ZlKy98w%2FY5NSpu9lJw%3D%3D"
+            <img src="https://storage.googleapis.com/vue-course-api.appspot.com/reirei/1742214819181.png"
             class="img-say-img img-fluid object-fit-cover"
               :alt="product.imageUrl">
           </div>
